@@ -292,7 +292,7 @@ function initExample() {
 				 bitmap.scaleY = faceShape.points[39].y-faceShape.points[30].y/bitmap.getBounds().height;
 				 bitmap.rotation = faceShape.rotationX;
 
-				 //_stage.update();
+				 _stage.update();
 
 				//this._draw.
 
