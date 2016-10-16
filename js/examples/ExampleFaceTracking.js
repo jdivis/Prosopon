@@ -111,7 +111,7 @@ function initExample() {
 
 												_stage.update();}
 
-                 image.src ="media/images/30-1-39.png";
+                 image.src ="media/images/FrankensteinHead.png";
 
 		_stage.update();
 
@@ -292,9 +292,19 @@ function initExample() {
 				 bitmap.scaleY = faceShape.points[39].y-faceShape.points[30].y/bitmap.getBounds().height;
 				 bitmap.rotation = faceShape.rotationX;
 
-				 _stage.update();
+				 //_stage.update();
 
-				//this._draw.
+				var sx = 0;
+				var sy = 0;
+				var sWidth = 454;
+				var sHeight = 512;
+				var dx = bitmap.x;
+				var dy = bitmap.y;
+				//var dWidth = ;
+				//var dHeight = ;
+
+				//_this._draw.drawImage(bitmap, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);
+				_this._draw.drawImage(bitmap,dx,dy);
 
 			}
 
