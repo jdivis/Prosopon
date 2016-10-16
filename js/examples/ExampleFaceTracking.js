@@ -111,7 +111,7 @@ function initExample() {
 
 												_stage.update();}
 
-                 image.src ="media/images/30-1-39-fill.png";
+                 image.src ="media/images/30-1-39.png";
 
 		_stage.update();
 
