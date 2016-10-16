@@ -175,9 +175,9 @@ function initExample() {
 
 			// which saves CPU cycles.
 
-			_this._brfManager.candideEnabled = true;
+			_this._brfManager.candideEnabled = false;
 
-			_this._brfManager.candideActionUnitsEnabled = true;
+			_this._brfManager.candideActionUnitsEnabled = false;
 
 
 
@@ -292,7 +292,7 @@ function initExample() {
 				 bitmap.scaleY = faceShape.points[39].y-faceShape.points[30].y/bitmap.getBounds().height;
 				 bitmap.rotation = faceShape.rotationX;
 
-				 //_stage.update();
+				 _stage.update();
 
 				//this._draw.
 
