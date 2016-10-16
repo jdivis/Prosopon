@@ -304,7 +304,14 @@ function initExample() {
 				//var dHeight = ;
 
 				//_this._draw.drawImage(bitmap, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);
-				_this._draw.drawImage(bitmap,dx,dy);
+				//_this._draw.drawImage(bitmap,dx,dy);
+				
+				for (var key in _this._draw) {
+  					if (_this._draw.hasOwnProperty(key)) {
+    					console.log(key + " -> " + _this._draw[key]);
+  					}
+				}
+				
 
 			}
 
