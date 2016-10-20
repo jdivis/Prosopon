@@ -34,8 +34,35 @@ if(createjs == null) {
 
 var maskID = 0;
 
+var finalX = 0;
+var finalY = 0;
+var finalW = 0;
+var finalH = 0;
+
+var roundedX = 0;
+var roundedY = 0;
+var roundedW = 0;
+var roundedH = 0;
+
 function changeMask(){
 	maskID = $("#maskSelection").value();
+	
+	switch(maskID){
+		case 0:
+			finalX = roundedX  * 0.9;
+			finalY = roundedY * 0.75;
+			finalW = roundedW * 1.25;
+			finalH = roundedH * 1.25;		
+		break;
+
+		case 1:
+			finalX = roundedX;
+			finalY = roundedY * 0.75;
+			finalW = roundedW * 2;
+			finalH = roundedH * 2;		
+		break;	
+	}
+	
 }
 
 function initExample() {
@@ -319,16 +346,17 @@ function initExample() {
 				}*/
 				var canvasg = document.getElementById("_mirror");
 				var ctx = canvasg.getContext('2d');
-				var roundedX = Math.round(faceShape.bounds.x);
-				var roundedY = Math.round(faceShape.bounds.y);
-				var roundedW = Math.round(faceShape.bounds.width);
-				var roundedH = Math.round(faceShape.bounds.height);//clear canvas
+				roundedX = Math.round(faceShape.bounds.x);
+				roundedY = Math.round(faceShape.bounds.y);
+				roundedW = Math.round(faceShape.bounds.width);
+				roundedH = Math.round(faceShape.bounds.height);
+				//clear canvas
 				ctx.clearRect(0,0,600,500);
 				ctx.fillStyle = "#ffff00";
 				var image = document.getElementById("source" + maskID);//scale y position (.75) and height (1.25) to better fit face
 				ctx.globalAlpha = 1;
 				ctx.globalCompositeOperation = "orginal";
-				ctx.drawImage(image,roundedX  * 0.9, roundedY * 0.75, roundedW * 1.25, roundedH * 1.25);
+				ctx.drawImage(image,finalX, finalY, finalW, finalH);
 			}
 
 		};
