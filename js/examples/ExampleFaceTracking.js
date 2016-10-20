@@ -353,6 +353,7 @@ function initExample() {
 				roundedH = Math.round(faceShape.bounds.height);
 				
 				calcFinalMaskValues();
+			
 				
 				//clear canvas
 				ctx.clearRect(0,0,600,500);
