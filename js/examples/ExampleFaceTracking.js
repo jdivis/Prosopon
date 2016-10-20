@@ -32,6 +32,12 @@ if(createjs == null) {
 
  var bitmapHeight = 313;
 
+var maskID = 0;
+
+function changeMask(){
+	maskID = $("#maskSelection").value();
+}
+
 function initExample() {
 
 	
@@ -319,7 +325,6 @@ function initExample() {
 				var roundedH = Math.round(faceShape.bounds.height);//clear canvas
 				ctx.clearRect(0,0,600,500);
 				ctx.fillStyle = "#ffff00";
-				var maskID = 0;
 				var image = document.getElementById("source" + maskID);//scale y position (.75) and height (1.25) to better fit face
 				ctx.globalAlpha = 1;
 				ctx.globalCompositeOperation = "orginal";
