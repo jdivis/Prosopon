@@ -44,9 +44,7 @@ var roundedY = 0;
 var roundedW = 0;
 var roundedH = 0;
 
-function changeMask(){
-	maskID = $("#maskSelection").val();
-	
+function calcFinalMaskValues(){
 	switch(maskID){
 		case 0:
 			finalX = roundedX  * 0.9;
@@ -62,7 +60,10 @@ function changeMask(){
 			finalH = roundedH * 2;		
 		break;	
 	}
-	
+}
+
+function changeMask(){
+	maskID = $("#maskSelection").val();
 }
 
 function initExample() {
@@ -350,6 +351,9 @@ function initExample() {
 				roundedY = Math.round(faceShape.bounds.y);
 				roundedW = Math.round(faceShape.bounds.width);
 				roundedH = Math.round(faceShape.bounds.height);
+				
+				calcFinalMaskValues();
+				
 				//clear canvas
 				ctx.clearRect(0,0,600,500);
 				ctx.fillStyle = "#ffff00";
