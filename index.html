@@ -61,16 +61,74 @@
 	
 	<!-- <script src="js/examples/images/ExampleFaceTrackingImage.js"></script> -->
 	<!-- <script src="js/examples/images/ExampleFaceDetectionImage.js"></script> -->
+    <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+    <script type="text/javascript">
+$(document).ready(function() {
+$('#moveleft').click(function() {
+$('#_mirror').animate({
+'marginLeft' : "-=300px" //moves left
+}).animate({
+'opacity' : "-=.3" //moves left
+});$('#frame').animate({
+'marginLeft' : "-=300px" //moves left
+}).animate({
+'opacity' : "-=.3" //moves left
+});$('#_stage').animate({
+'marginLeft' : "+=300px" //moves left
+}).animate({
+'opacity' : "-=.1" //moves left
+});
+});
+$('#moveright').click(function() {
+$('#_mirror').animate({
+'marginLeft' : "+=300px" //moves right
+}).animate({
+'opacity' : "+=.3" //moves left
+});$('#frame').animate({
+'marginLeft' : "+=300px" //moves right
+}).animate({
+'opacity' : "+=.3" //moves left
+});$('#_stage').animate({
+'marginLeft' : "-=300px" //moves right
+}).animate({
+'opacity' : "+=.3" //moves left
+});
+});
+$('#reset').click(function() {
+$('#_mirror').animate({
+'marginLeft' : "600px" //moves left
+}).animate({
+'opacity' : "1" //moves left
+});$('#frame').animate({
+'marginLeft' : "600px" //moves left
+}).animate({
+'opacity' : "1" //moves left
+});$('#_stage').animate({
+'marginLeft' : "0px" //moves left
+}).animate({
+'opacity' : "1" //moves left
+});
+});
+$('#moveup').click(function() {
+$('#textbox').animate({
+'marginTop' : "-=30px" //moves up
+});
+});
+});
+</script>
 </head>
 <!-- See example file for the initExample function. -->
 <body onload="initExample();">
+
+
+<div style="padding:10px;position:absolute;left:43%;top:500px;"> <button id="moveleft">Merge</button>  <button id="moveright">Isolate</button> <button id="reset">Reset</button></div>
 
 	<!--
 		This is the canvas for createjs (the stage). You can change the size to any values.
 		You just need to set screenRect to place the video/results at a certain position on that stage.
 	-->
-	<canvas id="_stage" width="1280" height="720" style="position:absolute;left:0px;top:0px;">Your browser does not seem to support canvas elements.</canvas>
-
+	<canvas id="_stage" width="600" height="480" style="position:absolute;left:0px;top:0px;">Your browser does not seem to support canvas elements.</canvas>
+	<canvas id="_mirror" width="600" height="480" style="position:absolute;left:600px;top:0px;background:url('bg.jpg');background-size:cover;opacity:1;">.</canvas>
 	<!--
 		Chrome on Android v35+ supports getUserMedia! But the video needs to be started on user action.
 		This play button will be shown, if a user action is needed.
@@ -86,6 +144,15 @@
 			<img src="media/assets/brf_nxt_logo_black.png" style="opacity:0.35;position:absolute;top:8px;left:9px;"/>
 			<img src="media/assets/brf_nxt_logo_white.png" style="opacity:0.75;position:absolute;top:7px;left:8px;"/>
 		</a>
+	</div>
+    <div style="display:none;">
+		<img id="source0" src="img/masks/FrankensteinHead.png" width="454" height="515" />
+		<img id="source1" src="img/masks/mask1.png" width="300" height="300" />
+		<img id="source2" src="img/masks/mask2.png" width="300" height="300" />
+		<img id="source3" src="img/masks/mask3.png" width="300" height="300" />
+		<img id="source4" src="img/masks/mask4.png" width="300" height="300" />
+		<img id="source5" src="img/masks/mask5.png" width="300" height="300" />
+		<img id="source6" src="img/masks/mask6.png" width="300" height="300" />
 	</div>
 </body>
 </html>
