@@ -323,7 +323,7 @@ function initExample() {
 				var image = document.getElementById("source" + maskID);//scale y position (.75) and height (1.25) to better fit face
 				ctx.globalAlpha = 1;
 				ctx.globalCompositeOperation = "orginal";
-				ctx.drawImage(image,roundedX  , roundedY * 0.75, roundedW * 1.25, roundedH * 1.25);
+				ctx.drawImage(image,roundedX  * 0.9, roundedY * 0.75, roundedW * 1.25, roundedH * 1.25);
 			}
 
 		};
