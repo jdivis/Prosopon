@@ -58,7 +58,15 @@ function calcFinalMaskValues(){
 			finalY = roundedY * 0.75;
 			finalW = roundedW * 1.75;
 			finalH = roundedH * 1.75;		
-		break;	
+		break;
+		
+		case "2":
+			finalX = roundedX;
+			finalY = roundedY;
+			finalW = roundedW;
+			finalH = roundedH;		
+		break;
+			
 	}
 }
 
