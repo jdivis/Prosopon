@@ -247,7 +247,7 @@ function initExample() {
 
 				// draw the faceShape and its bounds:
 
-				lib.DrawingUtils.drawTriangles(_this._draw, faceShape.faceShapeVertices, faceShape.faceShapeTriangles);
+				//lib.DrawingUtils.drawTriangles(_this._draw, faceShape.faceShapeVertices, faceShape.faceShapeTriangles);
 
 				//lib.DrawingUtils.drawTrianglesAsPoints(_this._draw, faceShape.faceShapeVertices);
 
@@ -282,24 +282,24 @@ function initExample() {
 				 //bitmap.regX = -faceShape.points[0].x - bitmapWidth/2; 
 				 //bitmap.regY = -faceShape.points[0].y + bitmapHeight/2;
 				 
-				 bitmap.x = faceShape.points[1].x; 
-				 bitmap.y = faceShape.points[30].y;
+				 //bitmap.x = faceShape.points[1].x; 
+				 //bitmap.y = faceShape.points[30].y;
 				 //trace();
-				 bitmap.regX = 0;
-				 bitmap.regY = 0;
-				 bitmap.alpha=1;
-				 bitmap.scaleX = faceShape.points[39].x-faceShape.points[1].x/bitmap.getBounds().width;
-				 bitmap.scaleY = faceShape.points[39].y-faceShape.points[30].y/bitmap.getBounds().height;
-				 bitmap.rotation = faceShape.rotationX;
+				 //bitmap.regX = 0;
+				 //bitmap.regY = 0;
+				 //bitmap.alpha=1;
+				 //bitmap.scaleX = faceShape.points[39].x-faceShape.points[1].x/bitmap.getBounds().width;
+				 //bitmap.scaleY = faceShape.points[39].y-faceShape.points[30].y/bitmap.getBounds().height;
+				 //bitmap.rotation = faceShape.rotationX;
 
 				 //_stage.update();
 
-				var sx = 0;
-				var sy = 0;
-				var sWidth = 454;
-				var sHeight = 512;
-				var dx = bitmap.x;
-				var dy = bitmap.y;
+				//var sx = 0;
+				//var sy = 0;
+				//var sWidth = 454;
+				//var sHeight = 512;
+				//var dx = bitmap.x;
+				//var dy = bitmap.y;
 				//var dWidth = ;
 				//var dHeight = ;
 
@@ -311,16 +311,18 @@ function initExample() {
     					console.log(key + " -> " + _this._draw[key]);
   					}
 				}*/
-				var canvasg = document.getElementById(“_mirror”);
-				var ctx = canvasg.getContext(‘2d’);var roundedX = Math.round(faceShape.bounds.x);
+				var canvasg = document.getElementById("_mirror");
+				var ctx = canvasg.getContext('2d');var roundedX = Math.round(faceShape.bounds.x);
 				var roundedY = Math.round(faceShape.bounds.y);
 				var roundedW = Math.round(faceShape.bounds.width);
 				var roundedH = Math.round(faceShape.bounds.height);//clear canvas
 				ctx.clearRect(0,0,600,500);
-				ctx.fillStyle = “#ffff00”;var image = document.getElementById(“source” + maskID);//scale y position (.75) and height (1.25) to better fit face
+				ctx.fillStyle = "#ffff00";
+				var maskID = 0;
+				var image = document.getElementById("source" + maskID);//scale y position (.75) and height (1.25) to better fit face
 				ctx.globalAlpha = 1;
-				ctx.globalCompositeOperation = “orginal”;
-				ctx.drawImage(image,roundedX  , roundedY * .75, roundedW, roundedH * 1.25);
+				ctx.globalCompositeOperation = "orginal";
+				ctx.drawImage(image,roundedX  , roundedY * 0.75, roundedW, roundedH * 1.25);
 			}
 
 		};
