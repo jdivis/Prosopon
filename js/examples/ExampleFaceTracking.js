@@ -66,6 +66,13 @@ function calcFinalMaskValues(){
 			finalW = roundedW;
 			finalH = roundedH;		
 		break;
+		
+		case "3":
+			finalX = roundedX;
+			finalY = roundedY;
+			finalW = roundedW;
+			finalH = roundedH;		
+		break;
 			
 	}
 }
