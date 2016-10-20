@@ -46,18 +46,18 @@ var roundedH = 0;
 
 function calcFinalMaskValues(){
 	switch(maskID){
-		case 0:
+		case "0":
 			finalX = roundedX  * 0.9;
 			finalY = roundedY * 0.75;
 			finalW = roundedW * 1.25;
 			finalH = roundedH * 1.25;		
 		break;
 
-		case 1:
-			finalX = roundedX;
+		case "1":
+			finalX = roundedX * -0.75;
 			finalY = roundedY * 0.75;
-			finalW = roundedW * 2;
-			finalH = roundedH * 2;		
+			finalW = roundedW * 1.75;
+			finalH = roundedH * 1.75;		
 		break;	
 	}
 }
