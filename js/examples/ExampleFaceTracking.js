@@ -45,7 +45,7 @@ var roundedW = 0;
 var roundedH = 0;
 
 function changeMask(){
-	maskID = $("#maskSelection").value();
+	maskID = $("#maskSelection").val();
 	
 	switch(maskID){
 		case 0:
