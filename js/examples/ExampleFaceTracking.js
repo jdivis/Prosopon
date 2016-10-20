@@ -312,7 +312,8 @@ function initExample() {
   					}
 				}*/
 				var canvasg = document.getElementById("_mirror");
-				var ctx = canvasg.getContext('2d');var roundedX = Math.round(faceShape.bounds.x);
+				var ctx = canvasg.getContext('2d');
+				var roundedX = Math.round(faceShape.bounds.x);
 				var roundedY = Math.round(faceShape.bounds.y);
 				var roundedW = Math.round(faceShape.bounds.width);
 				var roundedH = Math.round(faceShape.bounds.height);//clear canvas
@@ -322,7 +323,7 @@ function initExample() {
 				var image = document.getElementById("source" + maskID);//scale y position (.75) and height (1.25) to better fit face
 				ctx.globalAlpha = 1;
 				ctx.globalCompositeOperation = "orginal";
-				ctx.drawImage(image,roundedX  , roundedY * 0.75, roundedW, roundedH * 1.25);
+				ctx.drawImage(image,roundedX  , roundedY * 0.75, roundedW * 1.25, roundedH * 1.25);
 			}
 
 		};
