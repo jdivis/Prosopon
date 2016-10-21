@@ -65,10 +65,10 @@ function calcFinalHatValues(){
 }
 
 function calcFinalMustacheValues(){
-	finalX = faceShape.points[41].x;
-	finalY = faceShape.points[41].y;
-	finalW = roundedW;
-	finalH = roundedH;
+	finalW = roundedW * 0.333;
+	finalH = roundedW * 0.5;
+	finalX = faceShape.points[41].x - (finalW/2);
+	finalY = faceShape.points[41].y - (finalH/2);	
 }
 
 function calcFinalMaskValues(){
