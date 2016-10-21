@@ -126,9 +126,14 @@
             var type = "png",
                 w = 600,
                 h = 480;
-            Canvas2Image.saveAsImage(canvas, w, h, type);
+			var can3 = document.getElementById('mergeCanvas');
+			var ctx3 = can3.getContext('2d');
+
+			ctx3.drawImage(document.getElementById("_stage"), 0, 0);
+			ctx3.drawImage(document.getElementById("_mirror"), 0, 0);
+            Canvas2Image.saveAsImage(can3, w, h, type);
         }
     </script>
-
+<canvas id="mergeCanvas" width="600" height="480"></canvas>
 </body>
 </html>
