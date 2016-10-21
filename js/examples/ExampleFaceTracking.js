@@ -34,7 +34,7 @@ if(createjs == null) {
 
 var maskID = 0;
 var hatID = 0;
-var mustachID = 0;
+var mustacheID = 0;
 var faceShape;
 
 var finalX = 0;
