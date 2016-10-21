@@ -430,7 +430,7 @@ function initExample() {
 				ctx.drawImage(StepRightUpLogo,20,338,120,122);
 				
 				var ChooseToGiveLogo = document.getElementById("ChooseToGiveLogo");
-				ctx.drawImage(StepRightUpLogo,370,280,210,180);
+				ctx.drawImage(ChooseToGiveLogo,370,280,210,180);
 			}
 
 		};
