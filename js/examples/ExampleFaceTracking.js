@@ -436,7 +436,7 @@ function initExample() {
 				if(hatID > 0){
 					calcFinalHatValues();
 					var hat = document.getElementById("hat" + hatID);//scale y position (.75) and height (1.25) to better fit face
-					ctx.drawImage(hat,hatFinalX, hatFinalY, hatFinalW, hat.height);
+					ctx.drawImage(hat,hatFinalX, roundedY - hat.height, hatFinalW, hat.height);
 				}
 				
 				//Mustache
