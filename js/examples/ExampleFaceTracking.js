@@ -33,6 +33,8 @@ if(createjs == null) {
  var bitmapHeight = 313;
 
 var maskID = 0;
+var hatID = 0;
+var mustachID = 0;
 
 var finalX = 0;
 var finalY = 0;
@@ -79,6 +81,14 @@ function calcFinalMaskValues(){
 
 function changeMask(){
 	maskID = $("#maskSelection").val();
+}
+
+function changeHat(hatNumber){
+	hatID = hatNumber;
+}
+
+function changeMustache(mustacheNumber){
+	mustacheID = mustacheNumber;
 }
 
 function initExample() {
@@ -145,22 +155,22 @@ function initExample() {
 
 		
 
-		image = new Image();
+		//image = new Image();
 
-		console.log("adding image");
+		//console.log("adding image");
 
-    	image.onload = function(evt){bitmap = new createjs.Bitmap(evt.target);
+    	//image.onload = function(evt){bitmap = new createjs.Bitmap(evt.target);
 
-				 								bitmap.regX = 0;
+		//		 								bitmap.regX = 0;
 
-												bitmap.regY = 0;
-												bitmap.alpha = 0;
+		//										bitmap.regY = 0;
+		//										bitmap.alpha = 0;
 
-												_stage.addChild(bitmap);
+		//										_stage.addChild(bitmap);
 
-												_stage.update();}
+		//										_stage.update();}
 
-                 image.src ="media/images/FrankensteinHead.png";
+        //         image.src ="media/images/FrankensteinHead.png";
 
 		_stage.update();
 
@@ -373,10 +383,21 @@ function initExample() {
 				//clear canvas
 				ctx.clearRect(0,0,600,500);
 				ctx.fillStyle = "#ffff00";
-				var image = document.getElementById("source" + maskID);//scale y position (.75) and height (1.25) to better fit face
 				ctx.globalAlpha = 1;
 				ctx.globalCompositeOperation = "orginal";
-				ctx.drawImage(image,finalX, finalY, finalW, finalH);
+				
+				//Hat
+				if(hatID > 0){
+					var image = document.getElementById("source" + maskID);//scale y position (.75) and height (1.25) to better fit face
+					ctx.drawImage(image,finalX, finalY, finalW, finalH);
+				}
+				
+				//Mustache
+				if(mustacheID > 0){
+					var image = document.getElementById("source" + maskID);//scale y position (.75) and height (1.25) to better fit face
+					ctx.drawImage(image,finalX, finalY, finalW, finalH);
+				}
+				
 			}
 
 		};
