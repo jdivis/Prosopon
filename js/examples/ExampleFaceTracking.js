@@ -77,7 +77,7 @@ function calcFinalHatValues(){
 
 function calcFinalMustacheValues(){
 	
-	switch(mustachID){
+	switch(mustacheID){
 		case 1:
 			mustacheFinalW = roundedW * 0.5;
 			mustacheFinalH = roundedW * 0.2;
