@@ -27,7 +27,7 @@
 	</script>
 	<script src="js/lib/brf/BRF_NXT_public_API.js"></script>
 	<script src="js/lib/brf/BRF_NXT_JS_TK200215_v3.0.16_trial.js"></script>
-
+	<script src="js/lib/canvas2image/canvas2image.js"></script>
 	<!-- 
 		BRF examples using CreateJS.
 		
@@ -63,6 +63,15 @@
 	<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+	 $save = document.getElementById('save');
+    $save.onclick = function (e) {
+            var type = "png",
+                w = 600,
+                h = 480;
+            Canvas2Image.saveAsImage(canvas, w, h, type);
+        }
+    </script>
 	</head>
 	<!-- See example file for the initExample function. -->
 	<body onload="initExample();">
