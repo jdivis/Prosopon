@@ -63,15 +63,7 @@
 	<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script>
-	 $save = document.getElementById('save');
-    $save.onclick = function (e) {
-            var type = "png",
-                w = 600,
-                h = 480;
-            Canvas2Image.saveAsImage(canvas, w, h, type);
-        }
-    </script>
+    
 	</head>
 	<!-- See example file for the initExample function. -->
 	<body onload="initExample();">
@@ -127,5 +119,16 @@
     </div>
      <button id="save">save</button>
     <div class="container"><div class="row"><div class="col-sm-offset-2">&nbsp;</div><div class="col-sm-4"><img id="StepRightUpLogo" style="visibility:hidden" src="media/images/StepRightUp.png" width="120" height="auto" /></div><div class="col-sm-4"><img id="ChooseToGiveLogo" src="media/images/CTG-logo.jpg" style="visibility:hidden" /></div><div class="col-sm-offset-2">&nbsp;</div></div></div>
+
+<script>
+	 $save = document.getElementById('save');
+    $save.onclick = function (e) {
+            var type = "png",
+                w = 600,
+                h = 480;
+            Canvas2Image.saveAsImage(canvas, w, h, type);
+        }
+    </script>
+
 </body>
 </html>
