@@ -58,18 +58,38 @@ var roundedW = 0;
 var roundedH = 0;
 
 function calcFinalHatValues(){
-	hatFinalW = roundedW * 1.5;
-	hatFinalH = roundedH * 1.5;
-	hatFinalX = roundedX  - (hatFinalW/4);
-	hatFinalY = roundedY - hatFinalH;
+	
+	switch(hatID){
+		case 1:
+			hatFinalW = roundedW * 1.75;
+			hatFinalH = roundedH;
+			hatFinalX = roundedX  - (hatFinalW/5);
+			hatFinalY = roundedY - hatFinalH;
+		break;
+		default:
+			hatFinalW = roundedW * 1.5;
+			hatFinalH = roundedH * 1.5;
+			hatFinalX = roundedX  - (hatFinalW/4);
+			hatFinalY = roundedY - hatFinalH;
+	}
 	
 }
 
 function calcFinalMustacheValues(){
-	mustacheFinalW = roundedW * 0.5;
-	mustacheFinalH = roundedW * 0.2;
-	mustacheFinalX = faceShape.points[41].x - (mustacheFinalW/2);
-	mustacheFinalY = faceShape.points[41].y - (mustacheFinalH/2) + 10;	
+	
+	switch(mustachID){
+		case 1:
+			mustacheFinalW = roundedW * 0.5;
+			mustacheFinalH = roundedW * 0.2;
+			mustacheFinalX = faceShape.points[41].x - (mustacheFinalW/2);
+			mustacheFinalY = faceShape.points[41].y - (mustacheFinalH/2) + 10;
+		default:
+			mustacheFinalW = roundedW * 0.5;
+			mustacheFinalH = roundedH;
+			mustacheFinalX = faceShape.points[41].x - (mustacheFinalW/2);
+			mustacheFinalY = faceShape.points[41].y + 8;
+	}
+		
 }
 
 function calcFinalMaskValues(){
@@ -416,14 +436,14 @@ function initExample() {
 				if(hatID > 0){
 					calcFinalHatValues();
 					var hat = document.getElementById("hat" + hatID);//scale y position (.75) and height (1.25) to better fit face
-					ctx.drawImage(hat,hatFinalX, hatFinalY, hatFinalW, hatFinalH);
+					ctx.drawImage(hat,hatFinalX, hatFinalY, hatFinalW, hat.height);
 				}
 				
 				//Mustache
 				if(mustacheID > 0){
 					calcFinalMustacheValues();
 					var mustache = document.getElementById("mustache" + mustacheID);//scale y position (.75) and height (1.25) to better fit face
-					ctx.drawImage(mustache,mustacheFinalX, mustacheFinalY, mustacheFinalW, mustacheFinalH);
+					ctx.drawImage(mustache,mustacheFinalX, mustacheFinalY, mustacheFinalW, mustache.height);
 				}
 				
 				var StepRightUpLogo = document.getElementById("StepRightUpLogo");
