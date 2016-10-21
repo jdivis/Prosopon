@@ -58,17 +58,17 @@ var roundedW = 0;
 var roundedH = 0;
 
 function calcFinalHatValues(){
-	finalX = roundedX  * 0.9;
-	finalY = roundedY * 0.75;
-	finalW = roundedW * 1.25;
-	finalH = roundedH * 1.25;
+	hatFinalX = roundedX  * 0.9;
+	hatFinalY = roundedY * 0.75;
+	hatFinalW = roundedW * 1.25;
+	hatFinalH = roundedH * 1.25;
 }
 
 function calcFinalMustacheValues(){
-	finalW = roundedW * 0.333;
-	finalH = roundedW * 0.5;
-	finalX = faceShape.points[41].x - (finalW/2);
-	finalY = faceShape.points[41].y - (finalH/2);	
+	mustacheFinalW = roundedW * 0.333;
+	mustacheFinalH = roundedW * 0.5;
+	mustacheFinalX = faceShape.points[41].x - (finalW/2);
+	mustacheFinalY = faceShape.points[41].y - (finalH/2);	
 }
 
 function calcFinalMaskValues(){
