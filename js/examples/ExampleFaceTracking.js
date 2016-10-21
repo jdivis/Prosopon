@@ -426,6 +426,11 @@ function initExample() {
 					ctx.drawImage(mustache,mustacheFinalX, mustacheFinalY, mustacheFinalW, mustacheFinalH);
 				}
 				
+				var StepRightUpLogo = document.getElementById("StepRightUpLogo");
+				ctx.drawImage(StepRightUpLogo,20,338,120,122);
+				
+				var ChooseToGiveLogo = document.getElementById("ChooseToGiveLogo");
+				ctx.drawImage(StepRightUpLogo,370,280,210,180);
 			}
 
 		};
