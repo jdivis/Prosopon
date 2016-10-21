@@ -35,6 +35,7 @@ if(createjs == null) {
 var maskID = 0;
 var hatID = 0;
 var mustachID = 0;
+var faceShape;
 
 var finalX = 0;
 var finalY = 0;
@@ -45,6 +46,20 @@ var roundedX = 0;
 var roundedY = 0;
 var roundedW = 0;
 var roundedH = 0;
+
+function calcFinalHatValues(){
+	finalX = roundedX  * 0.9;
+	finalY = roundedY * 0.75;
+	finalW = roundedW * 1.25;
+	finalH = roundedH * 1.25;
+}
+
+function calcFinalMustacheValues(){
+	finalX = faceShape.points[41].x;
+	finalY = faceShape.points[41].y;
+	finalW = roundedW;
+	finalH = roundedH;
+}
 
 function calcFinalMaskValues(){
 	switch(maskID){
@@ -270,7 +285,7 @@ function initExample() {
 
 			var state = _this._brfManager.state;
 
-			var faceShape = _this._brfManager.faceShape;
+			faceShape = _this._brfManager.faceShape;
 
 
 
@@ -388,12 +403,14 @@ function initExample() {
 				
 				//Hat
 				if(hatID > 0){
+					calcFinalHatValues();
 					var image = document.getElementById("source" + maskID);//scale y position (.75) and height (1.25) to better fit face
 					ctx.drawImage(image,finalX, finalY, finalW, finalH);
 				}
 				
 				//Mustache
 				if(mustacheID > 0){
+					calcFinalMustacheValues();
 					var image = document.getElementById("source" + maskID);//scale y position (.75) and height (1.25) to better fit face
 					ctx.drawImage(image,finalX, finalY, finalW, finalH);
 				}
