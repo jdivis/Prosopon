@@ -58,10 +58,11 @@ var roundedW = 0;
 var roundedH = 0;
 
 function calcFinalHatValues(){
-	hatFinalX = roundedX  * 0.9;
-	hatFinalY = roundedY * 0.75;
-	hatFinalW = roundedW * 1.25;
-	hatFinalH = roundedH * 1.25;
+	hatFinalW = roundedW * 1.5;
+	hatFinalH = roundedH * 1.5;
+	hatFinalX = roundedX  - (hatFinalW/4);
+	hatFinalY = roundedY - hatFinalH;
+	
 }
 
 function calcFinalMustacheValues(){
