@@ -42,6 +42,16 @@ var finalY = 0;
 var finalW = 0;
 var finalH = 0;
 
+var mustacheFinalX = 0;
+var mustacheFinalY = 0;
+var mustacheFinalW = 0;
+var mustacheFinalH = 0;
+
+var hatFinalX = 0;
+var hatFinalY = 0;
+var hatFinalW = 0;
+var hatFinalH = 0;
+
 var roundedX = 0;
 var roundedY = 0;
 var roundedW = 0;
@@ -404,15 +414,15 @@ function initExample() {
 				//Hat
 				if(hatID > 0){
 					calcFinalHatValues();
-					var image = document.getElementById("hat" + hatID);//scale y position (.75) and height (1.25) to better fit face
-					ctx.drawImage(image,finalX, finalY, finalW, finalH);
+					var hat = document.getElementById("hat" + hatID);//scale y position (.75) and height (1.25) to better fit face
+					ctx.drawImage(hat,hatFinalX, hatFinalY, hatFinalW, hatFinalH);
 				}
 				
 				//Mustache
 				if(mustacheID > 0){
 					calcFinalMustacheValues();
-					var image = document.getElementById("mustache" + mustacheID);//scale y position (.75) and height (1.25) to better fit face
-					ctx.drawImage(image,finalX, finalY, finalW, finalH);
+					var mustache = document.getElementById("mustache" + mustacheID);//scale y position (.75) and height (1.25) to better fit face
+					ctx.drawImage(mustache,mustacheFinalX, mustacheFinalY, mustacheFinalW, mustacheFinalH);
 				}
 				
 			}
