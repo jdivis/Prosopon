@@ -404,14 +404,14 @@ function initExample() {
 				//Hat
 				if(hatID > 0){
 					calcFinalHatValues();
-					var image = document.getElementById("mustache" + maskID);//scale y position (.75) and height (1.25) to better fit face
+					var image = document.getElementById("mustache" + hatID);//scale y position (.75) and height (1.25) to better fit face
 					ctx.drawImage(image,finalX, finalY, finalW, finalH);
 				}
 				
 				//Mustache
 				if(mustacheID > 0){
 					calcFinalMustacheValues();
-					var image = document.getElementById("hat" + maskID);//scale y position (.75) and height (1.25) to better fit face
+					var image = document.getElementById("hat" + mustacheID);//scale y position (.75) and height (1.25) to better fit face
 					ctx.drawImage(image,finalX, finalY, finalW, finalH);
 				}
 				
