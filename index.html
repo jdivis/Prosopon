@@ -174,7 +174,7 @@
         <div class="col-sm-10 col-sm-offset-1">
               <canvas id="_stage" width="600" height="480" style="position:absolute;left:0px;top:0px;">Your browser does not seem to support canvas elements.</canvas>
               <canvas id="_mirror" width="600" height="480" style="position:absolute;left:0px;top:0px;">.</canvas>
-              <button id="save" class="btn-primary">save</button> 
+              <!--<button id="save" class="btn-primary">save</button>--> 
               <!--
 		Chrome on Android v35+ supports getUserMedia! But the video needs to be started on user action.
 		This play button will be shown, if a user action is needed.
@@ -244,18 +244,18 @@
   </div>
     </div>
 <script>
-	 $save = document.getElementById('save');
-    $save.onclick = function (e) {
-            var type = "png",
-                w = 600,
-                h = 480;
-			var can3 = document.getElementById('mergeCanvas');
-			var ctx3 = can3.getContext('2d');
+	 //$save = document.getElementById('save');
+    //$save.onclick = function (e) {
+      //      var type = "png",
+        //        w = 600,
+          //      h = 480;
+		///	var can3 = document.getElementById('mergeCanvas');
+		//	var ctx3 = can3.getContext('2d');
 
-			ctx3.drawImage(document.getElementById("_stage"), 0, 0);
-			ctx3.drawImage(document.getElementById("_mirror"), 0, 0);
-            Canvas2Image.saveAsImage(can3, w, h, type);
-        }
+//			ctx3.drawImage(document.getElementById("_stage"), 0, 0);
+	//		ctx3.drawImage(document.getElementById("_mirror"), 0, 0);
+      //      Canvas2Image.saveAsImage(can3, w, h, type);
+       // }
     </script>
 <canvas id="mergeCanvas" width="600" height="480"></canvas>
 </body>
