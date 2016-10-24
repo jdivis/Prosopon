@@ -1,9 +1,45 @@
 @charset "utf-8";
 /* CSS Document */
 
-#mustaches{}
+.gearColumn, .looksColumn{
+	background:#901200;
+}
 
-#hats img{
-	max-width:200px;
+#hats .hatBox, #mustaches .mustacheBox, #spectacles .spectacleBox, #ties .tieBox{
+	min-height:115px;
+	max-height:250px;
+	text-align:center;
+	padding:10px;	
+}
+
+#hats img,#mustaches img,#spectacles img, #ties img{
+	max-width:50%;
+	min-width:105px;
 	height:auto;
+	max-height:100px;
+	background-color:#FFF;
+	padding:20px;
+	display:block;
+	margin: 0 auto;
+}
+
+.jumboBackground{
+	background-image: url(../media/images/CircusBackground.jpg);
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+.jumbotron .stepRightUp{
+	color:#FFCE00;
+	text-shadow:#000000 2px 2px 5px;
+}
+
+.jumbotron p{
+	color:#F7F7F7;
+	text-shadow:#000 1px 1px 2px;
+}
+
+#Prosopon .navbar,#Prosopon .jumbotron{
+	margin-bottom:0;
 }

@@ -35,6 +35,8 @@ if(createjs == null) {
 var maskID = 0;
 var hatID = 0;
 var mustacheID = 0;
+var spectacleID = 0;
+var tieID = 0;
 var faceShape;
 
 var finalX = 0;
@@ -51,6 +53,16 @@ var hatFinalX = 0;
 var hatFinalY = 0;
 var hatFinalW = 0;
 var hatFinalH = 0;
+
+var spectacleFinalX = 0;
+var spectacleFinalY = 0;
+var spectacleFinalW = 0;
+var spectacleFinalH = 0;
+
+var tieFinalX = 0;
+var tieFinalY = 0;
+var tieFinalW = 0;
+var tieFinalH = 0;
 
 var roundedX = 0;
 var roundedY = 0;
@@ -83,11 +95,48 @@ function calcFinalMustacheValues(){
 			mustacheFinalH = roundedW * 0.2;
 			mustacheFinalX = faceShape.points[41].x - (mustacheFinalW/2);
 			mustacheFinalY = faceShape.points[41].y - (mustacheFinalH/2) + 10;
+			break;
 		default:
 			mustacheFinalW = roundedW * 0.5;
 			mustacheFinalH = roundedH;
 			mustacheFinalX = faceShape.points[41].x - (mustacheFinalW/2);
 			mustacheFinalY = faceShape.points[41].y + 8;
+	}
+		
+}
+
+function calcFinalSpectacleValues(){
+	
+	switch(spectacleID){
+		case 1:
+			spectacleFinalW = roundedW;
+			spectacleFinalH = roundedH;
+			spectacleFinalX = faceShape.points[0].x - (spectacleFinalW/2);
+			spectacleFinalY = faceShape.points[0].y - (spectacleFinalH/2) + 10;
+			break;
+		default:
+			spectacleFinalW = roundedW;
+			spectacleFinalH = roundedH;
+			spectacleFinalX = faceShape.points[0].x - (spectacleFinalW/2);
+			spectacleFinalY = faceShape.points[0].y + 10;
+	}
+		
+}
+
+function calcFinalTieValues(){
+	
+	switch(tieID){
+		case 1:
+			tieFinalW = roundedW;
+			tieFinalH = roundedH;
+			tieFinalX = faceShape.points[7].x - (tieFinalW/2);
+			tieFinalY = faceShape.points[7].y - (tieFinalH/2) + 10;
+			break;
+		default:
+			tieFinalW = roundedW;
+			tieFinalH = roundedH;
+			tieFinalX = faceShape.points[7].x - (tieFinalW/2);
+			tieFinalY = faceShape.points[7].y + 10;
 	}
 		
 }
@@ -135,6 +184,14 @@ function changeHat(hatNumber){
 
 function changeMustache(mustacheNumber){
 	mustacheID = mustacheNumber;
+}
+
+function changeSpectacle(spectacleNumber){
+	spectacleID = spectacleNumber;
+}
+
+function changeTie(tieNumber){
+	tieID = tieNumber;
 }
 
 function initExample() {
@@ -444,6 +501,20 @@ function initExample() {
 					calcFinalMustacheValues();
 					var mustache = document.getElementById("mustache" + mustacheID);//scale y position (.75) and height (1.25) to better fit face
 					ctx.drawImage(mustache,mustacheFinalX, mustacheFinalY, mustacheFinalW, mustache.height);
+				}
+				
+				//Spectacle
+				if(spectacleID > 0){
+					calcFinalSpectacleValues();
+					var spectacle = document.getElementById("spectacle" + spectacleID);//scale y position (.75) and height (1.25) to better fit face
+					ctx.drawImage(spectacle,spectacleFinalX, spectacleFinalY, spectacleFinalW, spectacle.height);
+				}
+				
+				//Tie
+				if(tieID > 0){
+					calcFinalTieValues();
+					var tie = document.getElementById("tie" + tieID);//scale y position (.75) and height (1.25) to better fit face
+					ctx.drawImage(tie,tieFinalX, tieFinalY, tieFinalW, tie.height);
 				}
 				
 				var StepRightUpLogo = document.getElementById("StepRightUpLogo");

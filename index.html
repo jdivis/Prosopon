@@ -6,12 +6,12 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="author" content="Marcel Klammer, Tastenkunst GmbH, 2015">
 	<meta name="description" content="Beyond Reality Face Nxt SDK - Javascript library for Face Tracking, Face Detection and Point Tracking">
-	<title>BRF Nxt</title>
+	<title>Step Right Up - Choose to Give</title>
 	<link rel="stylesheet" href="css/brf_examples.css">
 	<link rel="stylesheet" href="css/Prosopon.css">
 
 	<!-- MrDoobs Stats: https://github.com/mrdoob/stats.js/ -->
-	<script src="js/lib/stats/stats.min.js"></script>
+	<!-- <script src="js/lib/stats/stats.min.js"></script> -->
 
 	<!-- CreateJS: http://www.createjs.com -->
 	<script src="js/lib/createjs/easeljs-0.7.1.min.js"></script>
@@ -63,63 +63,186 @@
 	<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    
 	</head>
 	<!-- See example file for the initExample function. -->
-	<body onload="initExample();">
-    <div class="container-fluid">
-      <div class="row">
-        <div id="mustaches"  class="col-sm-12">
-          <div class="col-sm-6 col-md-4 col-lg-2"><img id="mustache0" onClick="changeMustache(0);" src="media/images/Mustache00.png" /></div>
-          <div class="col-sm-6 col-md-4 col-lg-2"><img id="mustache1" onClick="changeMustache(1);" src="media/images/Mustache01.png" /></div>
-          <div class="col-sm-6 col-md-4 col-lg-2"><img id="mustache2" onClick="changeMustache(2);" src="media/images/Mustache02.png" /></div>
-          <div class="col-sm-6 col-md-4 col-lg-2"><img id="mustache3" onClick="changeMustache(3);" src="media/images/Mustache03.png" /></div>
-          <div class="col-sm-6 col-md-4 col-lg-2"><img id="mustache4" onClick="changeMustache(4);" src="media/images/Mustache04.png" /></div>
-          <div class="col-sm-6 col-md-4 col-lg-2"><img id="mustache5" onClick="changeMustache(5);" src="media/images/Mustache05.png" /></div>
+	<body id="Prosopon" onload="initExample();">
+<div class="jumbotron jumboBackground">
+      <div class="container-fluid">
+    <div class="row">
+          <div class="col-lg-10 col-lg-offset-1">
+        <h1 class="stepRightUp">Step Right Up</h1>
+        <p>Take a Pict and Donate</p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+      </div>
         </div>
+  </div>
+    </div>
+<div class="container-fluid"> 
+      
+      <!-- nav -->
+      <div class="row">
+    <nav class="navbar navbar-default">
+          <div class="container-fluid"> 
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+              <a class="navbar-brand" href="#">Brand</a> </div>
+        
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+            <li><a href="#">Link</a></li>
+            <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+                </li>
+          </ul>
+              <form class="navbar-form navbar-left">
+            <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Search">
+                </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
+              <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Link</a></li>
+            <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+                </li>
+          </ul>
+            </div>
+        <!-- /.navbar-collapse --> 
+      </div>
+          <!-- /.container-fluid --> 
+        </nav>
+    
+    <!-- end:nav --> 
+  </div>
+      <div class="row">
+    <div class="col-sm-3 gearColumn">
+          <div class="row">
+        <div class="col-sm-12">
+              <h3>Hats</h3>
+            </div>
+      </div>
+          <div id="hats" class="row">
+        <div class="col-sm-6 hatBox"><img id="hat0" onClick="changeHat(0);" src="media/images/Hat00.png" /></div>
+        <div class="col-sm-6 hatBox"><img id="hat1" onClick="changeHat(1);" src="media/images/Hat01.png" /></div>
+        <div class="col-sm-6 hatBox"><img id="hat2" onClick="changeHat(2);" src="media/images/Hat02.png" /></div>
+        <div class="col-sm-6 hatBox"><img id="hat3" onClick="changeHat(3);" src="media/images/Hat03.png" /></div>
+        <div class="col-sm-6 hatBox"><img id="hat4" onClick="changeHat(4);" src="media/images/Hat04.png" /></div>
+        <div class="col-sm-6 hatBox"><img id="hat5" onClick="changeHat(5);" src="media/images/Hat05.png" /></div>
+        <div class="col-sm-6 hatBox"><img id="hat6" onClick="changeHat(6);" src="media/images/Hat06.png" /></div>
+        <div class="col-sm-6 hatBox"><img id="hat7" onClick="changeHat(7);" src="media/images/Hat07.png" /></div>
+        <div class="col-sm-6 hatBox"><img id="hat8" onClick="changeHat(8);" src="media/images/Hat08.png" /></div>
+        <div class="col-sm-6 hatBox"><img id="hat9" onClick="changeHat(9);" src="media/images/Hat09.png" /></div>
       </div>
       <div class="row">
-        <div id="hats" class="col-sm-12">
-          <div class="col-sm-6 col-md-4 col-lg-2"><img id="hat0" onClick="changeHat(0);" src="media/images/Hat00.png" /></div>
-          <div class="col-sm-6 col-md-4 col-lg-2"><img id="hat1" onClick="changeHat(1);" src="media/images/Hat01.png" /></div>
-          <div class="col-sm-6 col-md-4 col-lg-2"><img id="hat2" onClick="changeHat(2);" src="media/images/Hat02.png" /></div>
-          <div class="col-sm-6 col-md-4 col-lg-2"><img id="hat3" onClick="changeHat(3);" src="media/images/Hat03.png" /></div>
-          <div class="col-sm-6 col-md-4 col-lg-2"><img id="hat4" onClick="changeHat(4);" src="media/images/Hat04.png" /></div>
-          <div class="col-sm-6 col-md-4 col-lg-2"><img id="hat5" onClick="changeHat(5);" src="media/images/Hat05.png" /></div>
-        </div>
+        <div class="col-sm-12">
+              <h3>Spectacles</h3>
+            </div>
       </div>
-      <div> 
-        <!--
+          <div id="spectacles" class="row">
+        <div class="col-sm-6 spectacleBox"><img id="spectacle0" onClick="changeSpectacle(0);" src="media/images/Spectacle00.png" /></div>
+        <div class="col-sm-6 spectacleBox"><img id="spectacle1" onClick="changeSpectacle(1);" src="media/images/Spectacle01.png" /></div>
+        <div class="col-sm-6 spectacleBox"><img id="spectacle2" onClick="changeSpectacle(2);" src="media/images/Spectacle02.png" /></div>
+        <div class="col-sm-6 spectacleBox"><img id="spectacle3" onClick="changeSpectacle(3);" src="media/images/Spectacle03.png" /></div>
+        <div class="col-sm-6 spectacleBox"><img id="spectacle4" onClick="changeSpectacle(4);" src="media/images/Spectacle04.png" /></div>
+        <div class="col-sm-6 spectacleBox"><img id="spectacle5" onClick="changeSpectacle(5);" src="media/images/Spectacle05.png" /></div>
+      </div>
+        </div>
+    <div class="col-sm-6">
+          <h2>Preview</h2>
+          <!--
 		This is the canvas for createjs (the stage). You can change the size to any values.
 		You just need to set screenRect to place the video/results at a certain position on that stage.
 	-->
-        <div class="row">
-          <div class="col-sm-10 col-sm-offset-1">
-            <canvas id="_stage" width="600" height="480" style="position:absolute;left:0px;top:0px;">Your browser does not seem to support canvas elements.</canvas>
-            <canvas id="_mirror" width="600" height="480" style="position:absolute;left:0px;top:0px;">.</canvas>
-            <!--
+          <div class="row">
+        <div class="col-sm-10 col-sm-offset-1">
+              <canvas id="_stage" width="600" height="480" style="position:absolute;left:0px;top:0px;">Your browser does not seem to support canvas elements.</canvas>
+              <canvas id="_mirror" width="600" height="480" style="position:absolute;left:0px;top:0px;">.</canvas>
+              <button id="save" class="btn-primary">save</button>
+              <!--
 		Chrome on Android v35+ supports getUserMedia! But the video needs to be started on user action.
 		This play button will be shown, if a user action is needed.
 	--> 
-            <img src="media/assets/play.png" id="btPlay" style="display:none;position:absolute;top:165px;left:221px;"/> 
-            
-            <!--
+              <img src="media/assets/play.png" id="btPlay" style="display:none;position:absolute;top:165px;left:221px;"/> 
+              
+              <!--
 		The Beyond Reality Face Nxt logo.
 		Please be fair and don't hide the logo! Thanks.
 	-->
-            <div id="brfLogo"> <a href="https://www.beyond-reality-face.com" target="_blank"> <img src="media/assets/brf_nxt_logo_black.png" width="56" height="auto" style="opacity:0.35;position:absolute;top:8px;left:9px;"/> <img src="media/assets/brf_nxt_logo_white.png" width="56" height="auto" style="opacity:0.75;position:absolute;top:7px;left:8px;"/> </a> </div>
-            <div style="display:none;"> <img id="source0" src="media/images/FrankensteinHead.png" width="120%" height="auto" /> <img id="source1" src="media/images/werewolf.png" width="120%" height="auto" /> <img id="source2" src="media/images/BrideOfFrankenstein.png" width="120%" height="auto" /> <img id="source3" src="media/images/WitchHat.png" width="120%" height="auto" /> 
-              <!--<img id="source4" src="img/masks/mask4.png" width="300" height="300" />
+              <div id="brfLogo"> <a href="https://www.beyond-reality-face.com" target="_blank"> <img src="media/assets/brf_nxt_logo_black.png" width="56" height="auto" style="opacity:0.35;position:absolute;top:8px;left:9px;"/> <img src="media/assets/brf_nxt_logo_white.png" width="56" height="auto" style="opacity:0.75;position:absolute;top:7px;left:8px;"/> </a> </div>
+              <div style="display:none;"> <img id="source0" src="media/images/FrankensteinHead.png" width="120%" height="auto" /> <img id="source1" src="media/images/werewolf.png" width="120%" height="auto" /> <img id="source2" src="media/images/BrideOfFrankenstein.png" width="120%" height="auto" /> <img id="source3" src="media/images/WitchHat.png" width="120%" height="auto" /> 
+            <!--<img id="source4" src="img/masks/mask4.png" width="300" height="300" />
 		<img id="source5" src="img/masks/mask5.png" width="300" height="300" />
 		<img id="source6" src="img/masks/mask6.png" width="300" height="300" />--> 
-            </div>
           </div>
-        </div>
+          
+            </div>
       </div>
+        </div>
+    <div class="col-sm-3 looksColumn">
+          <div class="row">
+        <div class="col-sm-12">
+              <h3>Mustaches</h3>
+            </div>
+      </div>
+          <div id="mustaches" class="row">
+        <div class="col-sm-6 mustacheBox"><img id="mustache0" onClick="changeMustache(0);" src="media/images/Mustache00.png" /></div>
+        <div class="col-sm-6 mustacheBox"><img id="mustache1" onClick="changeMustache(1);" src="media/images/Mustache01.png" /></div>
+        <div class="col-sm-6 mustacheBox"><img id="mustache2" onClick="changeMustache(2);" src="media/images/Mustache02.png" /></div>
+        <div class="col-sm-6 mustacheBox"><img id="mustache3" onClick="changeMustache(3);" src="media/images/Mustache03.png" /></div>
+        <div class="col-sm-6 mustacheBox"><img id="mustache4" onClick="changeMustache(4);" src="media/images/Mustache04.png" /></div>
+        <div class="col-sm-6 mustacheBox"><img id="mustache5" onClick="changeMustache(5);" src="media/images/Mustache05.png" /></div>
+        <div class="col-sm-6 mustacheBox"><img id="mustache6" onClick="changeMustache(6);" src="media/images/Mustache06.png" /></div>
+        <div class="col-sm-6 mustacheBox"><img id="mustache7" onClick="changeMustache(7);" src="media/images/Mustache07.png" /></div>
+        <div class="col-sm-6 mustacheBox"><img id="mustache8" onClick="changeMustache(8);" src="media/images/Mustache08.png" /></div>
+        <div class="col-sm-6 mustacheBox"><img id="mustache9" onClick="changeMustache(9);" src="media/images/Mustache09.png" /></div>
+        <div class="col-sm-6 mustacheBox"><img id="mustache10" onClick="changeMustache(10);" src="media/images/Mustache10.png" /></div>
+        <div class="col-sm-6 mustacheBox"><img id="mustache11" onClick="changeMustache(11);" src="media/images/Mustache11.png" /></div>
+        <div class="col-sm-6 mustacheBox"><img id="mustache12" onClick="changeMustache(12);" src="media/images/Mustache12.png" /></div>
+        <div class="col-sm-6 mustacheBox"><img id="mustache13" onClick="changeMustache(13);" src="media/images/Mustache13.png" /></div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+              <h3>Ties</h3>
+            </div>
+      </div>
+          <div id="ties" class="row">
+        <div class="col-sm-6 tieBox"><img id="tie0" onClick="changeTie(0);" src="media/images/Tie00.png" /></div>
+        <div class="col-sm-6 tieBox"><img id="tie1" onClick="changeTie(1);" src="media/images/Tie01.png" /></div>
+        <div class="col-sm-6 tieBox"><img id="tie2" onClick="changeTie(2);" src="media/images/Tie02.png" /></div>
+        <div class="col-sm-6 tieBox"><img id="tie3" onClick="changeTie(3);" src="media/images/Tie03.png" /></div>
+        <div class="col-sm-6 tieBox"><img id="tie4" onClick="changeTie(4);" src="media/images/Tie04.png" /></div>
+        <div class="col-sm-6 tieBox"><img id="tie5" onClick="changeTie(5);" src="media/images/Tie05.png" /></div>
+        <div class="col-sm-6 tieBox"><img id="tie6" onClick="changeTie(6);" src="media/images/Tie06.png" /></div>
+      </div>
+        </div>
+  </div>
+      <div> </div>
     </div>
-     <button id="save">save</button>
-    <div class="container"><div class="row"><div class="col-sm-offset-2">&nbsp;</div><div class="col-sm-4"><img id="StepRightUpLogo" style="visibility:hidden" src="media/images/StepRightUp.png" width="120" height="auto" /></div><div class="col-sm-4"><img id="ChooseToGiveLogo" src="media/images/CTG-logo.jpg" style="visibility:hidden" /></div><div class="col-sm-offset-2">&nbsp;</div></div></div>
-
+<div class="container">
+      <div class="row">
+    <div class="col-sm-offset-2">&nbsp;</div>
+    <div class="col-sm-4"><img id="StepRightUpLogo" style="visibility:hidden" src="media/images/StepRightUp.png" width="120" height="auto" /></div>
+    <div class="col-sm-4"><img id="ChooseToGiveLogo" src="media/images/CTG-logo.jpg" style="visibility:hidden" /></div>
+    <div class="col-sm-offset-2">&nbsp;</div>
+  </div>
+    </div>
 <script>
 	 $save = document.getElementById('save');
     $save.onclick = function (e) {
