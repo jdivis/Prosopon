@@ -91,10 +91,10 @@ function calcFinalMustacheValues(){
 	
 	switch(mustacheID){
 		default:
-			mustacheFinalW = roundedW * 0.5;
+			mustacheFinalW = roundedW;
 			mustacheFinalH = roundedH;
 			mustacheFinalX = faceShape.points[41].x - (mustacheFinalW/2);
-			mustacheFinalY = faceShape.points[41].y + 8;
+			mustacheFinalY = faceShape.points[41].y;
 	}
 		
 }

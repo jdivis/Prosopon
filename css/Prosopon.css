@@ -43,3 +43,8 @@
 #Prosopon .navbar,#Prosopon .jumbotron{
 	margin-bottom:0;
 }
+
+#save{
+	position:absolute;
+	top:500px;
+}
