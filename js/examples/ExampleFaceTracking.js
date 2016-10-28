@@ -521,6 +521,8 @@ function initExample() {
 				var canvasf = document.getElementById("face");
 				var ctxf = canvasf.getContext('2d');
 			
+				ctxf.save();
+			
 				ctxf.clearRect(0,0,600,500);
 				ctxf.fillStyle = "#ffff00";
 				ctxf.globalAlpha = 1;
@@ -538,6 +540,8 @@ function initExample() {
 				//ctxf.clip();
 				
 				ctxf.drawImage(document.getElementById("_stage"), 0, 0);
+			
+				ctx.restore();
 				
 				//clear canvas
 				ctx.clearRect(0,0,600,500);
