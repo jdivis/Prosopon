@@ -568,7 +568,7 @@ function initExample() {
 				if(spectacleID > 0){
 					calcFinalSpectacleValues();
 					var spectacle = document.getElementById("spectacle" + spectacleID);//scale y position (.75) and height (1.25) to better fit face
-					ctx.drawImage(spectacle,spectacleFinalX +(roundedW/2), spectacleFinalY -(roundedH/4), spectacleFinalW, spectacle.height);
+					ctx.drawImage(spectacle,spectacleFinalX +(roundedW/2), spectacleFinalY -(roundedH/4), spectacleFinalW, spectacle.height * (spectacleFinalW/spectacle.width));
 				}
 				
 				//Tie
