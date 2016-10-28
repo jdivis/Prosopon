@@ -177,15 +177,15 @@
               	<canvas id="_stage" width="600" height="480" style="position:absolute;left:0px;top:0px;">Your browser does not seem to support canvas elements.</canvas>
         
         	  	<!-- backgroundImage should be written to only when the background is changed -->
-              	<canvas id="backgroundImage" width="600" height="480" style="position:absolute;left:0px;top:0px;">.</canvas>
+              	<img id="backgroundImage" width="600" height="480" style="position:absolute;left:0px;top:480px;" src="media/images/CircusBackground.png" />
         
         		<!-- the canvas with only the head drawn -->
                	<canvas id="face" width="600" height="480" style="position:absolute;left:0px;top:480px;">.</canvas>
         
         	  	<!-- mirror has all of the facial features on it -->
-              	<canvas id="_mirror" width="600" height="480" style="position:absolute;left:0px;top:0px;">.</canvas>
+              	<canvas id="_mirror" width="600" height="480" style="position:absolute;left:0px;top:480px;">.</canvas>
                             
-              <!--<button id="save" class="btn-primary">save</button>--> 
+              <button id="save" class="btn-primary">save</button> 
               <!--
 		Chrome on Android v35+ supports getUserMedia! But the video needs to be started on user action.
 		This play button will be shown, if a user action is needed.
@@ -263,7 +263,8 @@
 			var can3 = document.getElementById('mergeCanvas');
 			var ctx3 = can3.getContext('2d');
 
-			ctx3.drawImage(document.getElementById("_stage"), 0, 0);
+			ctx3.drawImage(document.getElementById("backgroundImage"), 0, 0);
+			ctx3.drawImage(document.getElementById("face"), 0, 0);
 			ctx3.drawImage(document.getElementById("_mirror"), 0, 0);
             Canvas2Image.saveAsImage(can3, w, h, type);
         }
