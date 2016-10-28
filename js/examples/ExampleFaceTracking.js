@@ -25,7 +25,8 @@ if(createjs == null) {
  */
 
  var _stage;
-
+ var canvasf;
+ var ctxf;
  var pointInts;
 
  var bitmapWidth = 251;
@@ -244,6 +245,9 @@ function initExample() {
 	_stage.addChild(new nxtjs.ExampleFaceTracking());
 
 	_stage.compositeOperation = "darken";
+	
+	canvasf = document.getElementById("face");
+	ctxf = canvasf.getContext('2d');
 
 }
 
@@ -517,10 +521,6 @@ function initExample() {
 				
 				calcFinalMaskValues();
 			
-			
-				var canvasf = document.getElementById("face");
-				var ctxf = canvasf.getContext('2d');
-			
 				ctxf.save();
 			
 				ctxf.clearRect(0,0,600,500);
@@ -541,7 +541,7 @@ function initExample() {
 				
 				ctxf.drawImage(document.getElementById("_stage"), 0, 0);
 			
-				ctx.restore();
+				ctxf.restore();
 				
 				//clear canvas
 				ctx.clearRect(0,0,600,500);
