@@ -178,6 +178,7 @@ function changeTie(tieNumber){
 }
 
 function getFaceOuterPath(faceshape){
+	var buffer = 5;
 	var outerFacePoints = [{x:-1, y:-1}, {x:-1, y:-1},{x:-1, y:-1},{x:-1, y:-1},{x:-1, y:-1},{x:-1, y:-1},{x:-1, y:-1},{x:-1, y:-1},{x:-1, y:-1},{x:-1, y:-1},{x:-1, y:-1},{x:-1, y:-1},{x:-1, y:-1},{x:-1, y:-1},{x:-1, y:-1},{x:-1, y:-1},{x:-1, y:-1},{x:-1, y:-1},{x:-1, y:-1},{x:-1, y:-1},{x:-1, y:-1},{x:-1, y:-1}];
 	
 	outerFacePoints[0].x = faceShape.points[0].x;
@@ -210,18 +211,18 @@ function getFaceOuterPath(faceshape){
 	outerFacePoints[13].y = faceShape.points[13].y;
 	outerFacePoints[14].x = faceShape.points[14].x;
 	outerFacePoints[14].y = faceShape.points[14].y;
-	outerFacePoints[15].x = faceShape.points[15].x;
-	outerFacePoints[15].y = faceShape.points[15].y;
-	outerFacePoints[16].x = faceShape.points[16].x;
-	outerFacePoints[16].y = faceShape.points[16].y;
+	outerFacePoints[15].x = faceShape.points[15].x+buffer;
+	outerFacePoints[15].y = faceShape.points[15].y-buffer;
+	outerFacePoints[16].x = faceShape.points[16].x+buffer;
+	outerFacePoints[16].y = faceShape.points[16].y-buffer;
 	outerFacePoints[17].x = faceShape.points[17].x;
-	outerFacePoints[17].y = faceShape.points[17].y;
+	outerFacePoints[17].y = faceShape.points[17].y-buffer;
 	outerFacePoints[18].x = faceShape.points[23].x;
-	outerFacePoints[18].y = faceShape.points[23].y;
-	outerFacePoints[19].x = faceShape.points[22].x;
-	outerFacePoints[19].y = faceShape.points[22].y;
-	outerFacePoints[20].x = faceShape.points[21].x;
-	outerFacePoints[20].y = faceShape.points[21].y;
+	outerFacePoints[18].y = faceShape.points[23].y-buffer;
+	outerFacePoints[19].x = faceShape.points[22].x-buffer;
+	outerFacePoints[19].y = faceShape.points[22].y-buffer;
+	outerFacePoints[20].x = faceShape.points[21].x-buffer;
+	outerFacePoints[20].y = faceShape.points[21].y-buffer;
 	outerFacePoints[21].x = faceShape.points[0].x;
 	outerFacePoints[21].y = faceShape.points[0].y;
 		
