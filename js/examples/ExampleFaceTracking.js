@@ -518,7 +518,7 @@ function initExample() {
 				calcFinalMaskValues();
 			
 			
-				var canvasf = document.getElementById("_mirror");
+				var canvasf = document.getElementById("face");
 				var ctxf = canvasf.getContext('2d');
 			
 				ctxf.clearRect(0,0,600,500);
