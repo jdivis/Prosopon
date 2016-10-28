@@ -174,16 +174,16 @@
         <div class="col-sm-10 col-sm-offset-1">
         
         		<!-- stage is where the camera data is drawn -->
-              	<canvas id="_stage" width="600" height="480" style="position:absolute;left:0px;top:0px;">Your browser does not seem to support canvas elements.</canvas>
+              	<canvas id="_stage" width="600" height="480" style="position:absolute;left:0px;top:0px;display:none;">Your browser does not seem to support canvas elements.</canvas>
         
         	  	<!-- backgroundImage should be written to only when the background is changed -->
-              	<img id="backgroundImage" width="600" height="480" style="position:absolute;left:0px;top:480px;" src="media/images/CircusBackground.png" />
+              	<img id="backgroundImage" width="600" height="480" style="position:absolute;left:0px;top:0px;" src="media/images/CircusBackground.png" />
         
         		<!-- the canvas with only the head drawn -->
-               	<canvas id="face" width="600" height="480" style="position:absolute;left:0px;top:480px;">.</canvas>
+               	<canvas id="face" width="600" height="480" style="position:absolute;left:0px;top:0px;">.</canvas>
         
         	  	<!-- mirror has all of the facial features on it -->
-              	<canvas id="_mirror" width="600" height="480" style="position:absolute;left:0px;top:480px;">.</canvas>
+              	<canvas id="_mirror" width="600" height="480" style="position:absolute;left:0px;top:0px;">.</canvas>
                             
               <button id="save" class="btn-primary">save</button> 
               <!--
