@@ -524,18 +524,18 @@ function initExample() {
 				ctxf.clearRect(0,0,600,500);
 				ctxf.fillStyle = "#ffff00";
 				ctxf.globalAlpha = 1;
-				ctxf.globalCompositeOperation = "source-in";
+				ctxf.globalCompositeOperation = "original";
 				
-				var faceOuterPath = getFaceOuterPath(faceShape);
+				//var faceOuterPath = getFaceOuterPath(faceShape);
 				
-				ctxf.beginPath();
-				ctxf.moveTo(faceOuterPath[0].x,faceOuterPath[0].y);
+				//ctxf.beginPath();
+				//ctxf.moveTo(faceOuterPath[0].x,faceOuterPath[0].y);
 				
-				for(var i = 1;i<faceOuterPath.length; i++){
-					ctxf.lineTo(faceOuterPath[i].x,faceOuterPath[i].y);	
-				}
+				//for(var i = 1;i<faceOuterPath.length; i++){
+				//	ctxf.lineTo(faceOuterPath[i].x,faceOuterPath[i].y);	
+				//}
 				
-				ctxf.clip();
+				//ctxf.clip();
 				
 				ctxf.drawImage(document.getElementById("_stage"), 0, 0);
 				
