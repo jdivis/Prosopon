@@ -176,6 +176,59 @@ function changeTie(tieNumber){
 	tieID = tieNumber;
 }
 
+function getFaceOuterPath(faceshape){
+	var outerFacePoints;
+	
+	outerFacePoints[0].x = faceShape.points[0].x;
+	outerFacePoints[0].y = faceShape.points[0].y;
+	outerFacePoints[1].x = faceShape.points[1].x;
+	outerFacePoints[1].y = faceShape.points[1].y;
+	outerFacePoints[2].x = faceShape.points[2].x;
+	outerFacePoints[2].y = faceShape.points[2].y;
+	outerFacePoints[3].x = faceShape.points[3].x;
+	outerFacePoints[3].y = faceShape.points[3].y;
+	outerFacePoints[4].x = faceShape.points[4].x;
+	outerFacePoints[4].y = faceShape.points[4].y;
+	outerFacePoints[5].x = faceShape.points[5].x;
+	outerFacePoints[5].y = faceShape.points[5].y;
+	outerFacePoints[6].x = faceShape.points[6].x;
+	outerFacePoints[6].y = faceShape.points[6].y;
+	outerFacePoints[7].x = faceShape.points[7].x;
+	outerFacePoints[7].y = faceShape.points[7].y;
+	outerFacePoints[8].x = faceShape.points[8].x;
+	outerFacePoints[8].y = faceShape.points[8].y;
+	outerFacePoints[9].x = faceShape.points[9].x;
+	outerFacePoints[9].y = faceShape.points[9].y;
+	outerFacePoints[10].x = faceShape.points[10].x;
+	outerFacePoints[10].y = faceShape.points[10].y;
+	outerFacePoints[11].x = faceShape.points[11].x;
+	outerFacePoints[11].y = faceShape.points[11].y;
+	outerFacePoints[12].x = faceShape.points[12].x;
+	outerFacePoints[12].y = faceShape.points[12].y;
+	outerFacePoints[13].x = faceShape.points[13].x;
+	outerFacePoints[13].y = faceShape.points[13].y;
+	outerFacePoints[14].x = faceShape.points[14].x;
+	outerFacePoints[14].y = faceShape.points[14].y;
+	outerFacePoints[15].x = faceShape.points[15].x;
+	outerFacePoints[15].y = faceShape.points[15].y;
+	outerFacePoints[16].x = faceShape.points[16].x;
+	outerFacePoints[16].y = faceShape.points[16].y;
+	outerFacePoints[17].x = faceShape.points[17].x;
+	outerFacePoints[17].y = faceShape.points[17].y;
+	outerFacePoints[23].x = faceShape.points[23].x;
+	outerFacePoints[23].y = faceShape.points[23].y;
+	outerFacePoints[22].x = faceShape.points[22].x;
+	outerFacePoints[22].y = faceShape.points[22].y;
+	outerFacePoints[21].x = faceShape.points[21].x;
+	outerFacePoints[21].y = faceShape.points[21].y;
+	outerFacePoints[0].x = faceShape.points[0].x;
+	outerFacePoints[0].y = faceShape.points[0].y;
+		
+	return outerFacePoints;
+}
+
+
+
 function initExample() {
 
 	
@@ -464,6 +517,27 @@ function initExample() {
 				
 				calcFinalMaskValues();
 			
+			
+				var canvasf = document.getElementById("_mirror");
+				var ctxf = canvasf.getContext('2d');
+			
+				ctxf.clearRect(0,0,600,500);
+				ctxf.fillStyle = "#ffff00";
+				ctxf.globalAlpha = 1;
+				ctxf.globalCompositeOperation = "source-in";
+				
+				var faceOuterPath = getFaceOuterPath(faceShape);
+				
+				ctxf.beginPath();
+				ctxf.moveTo(faceOuterPath[0].x,faceOuterPath[0].y);
+				
+				for(var i = 1;i<faceOuterPath.length; i++){
+					ctxf.lineTo(faceOuterPath[i].x,faceOuterPath[i].y);	
+				}
+				
+				ctxf.clip();
+				
+				ctxf.drawImage(document.getElementById("_stage"), 0, 0);
 				
 				//clear canvas
 				ctx.clearRect(0,0,600,500);
