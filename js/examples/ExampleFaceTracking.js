@@ -211,9 +211,9 @@ function getFaceOuterPath(faceshape){
 	outerFacePoints[13].y = faceShape.points[13].y;
 	outerFacePoints[14].x = faceShape.points[14].x;
 	outerFacePoints[14].y = faceShape.points[14].y;
-	outerFacePoints[15].x = faceShape.points[15].x+buffer;
+	outerFacePoints[15].x = faceShape.points[15].x;
 	outerFacePoints[15].y = faceShape.points[15].y-buffer;
-	outerFacePoints[16].x = faceShape.points[16].x+buffer;
+	outerFacePoints[16].x = faceShape.points[16].x;
 	outerFacePoints[16].y = faceShape.points[16].y-buffer;
 	outerFacePoints[17].x = faceShape.points[17].x;
 	outerFacePoints[17].y = faceShape.points[17].y-buffer;
