@@ -77,13 +77,13 @@ function calcFinalHatValues(){
 			hatFinalW = roundedW * 1.75;
 			hatFinalH = roundedH;
 			hatFinalX = roundedX  - (hatFinalW/5);
-			hatFinalY = roundedY - hatFinalH;
+			hatFinalY = roundedY - hatFinalH + 5;
 		break;
 		default:
 			hatFinalW = roundedW * 1.5;
 			hatFinalH = roundedH * 1.5;
 			hatFinalX = roundedX  - (hatFinalW/4);
-			hatFinalY = roundedY - hatFinalH;
+			hatFinalY = roundedY - hatFinalH + 5;
 	}
 	
 }
@@ -95,7 +95,7 @@ function calcFinalMustacheValues(){
 			mustacheFinalW = roundedW;
 			mustacheFinalH = roundedH;
 			mustacheFinalX = faceShape.points[41].x - (mustacheFinalW/2);
-			mustacheFinalY = faceShape.points[41].y;
+			mustacheFinalY = faceShape.points[41].y - 3;
 	}
 		
 }
@@ -107,7 +107,7 @@ function calcFinalSpectacleValues(){
 			spectacleFinalW = roundedW;
 			spectacleFinalH = roundedH;
 			spectacleFinalX = faceShape.points[0].x - (spectacleFinalW/2);
-			spectacleFinalY = faceShape.points[0].y + 10;
+			spectacleFinalY = faceShape.points[0].y + 5;
 	}
 		
 }
@@ -119,7 +119,7 @@ function calcFinalTieValues(){
 			tieFinalW = roundedW;
 			tieFinalH = roundedH;
 			tieFinalX = faceShape.points[7].x - (tieFinalW/2);
-			tieFinalY = faceShape.points[7].y - (tieFinalH/2) + 10;
+			tieFinalY = faceShape.points[7].y - (tieFinalH/2);
 	}
 		
 }
