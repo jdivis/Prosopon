@@ -554,7 +554,7 @@ function initExample() {
 				if(hatID > 0){
 					calcFinalHatValues();
 					var hat = document.getElementById("hat" + hatID);//scale y position (.75) and height (1.25) to better fit face
-					ctx.drawImage(hat,roundedX - roundedW/2, roundedY - roundedH*1.5, roundedW*2, (roundedW*2/hat.width) *hat.height);
+					ctx.drawImage(hat,roundedX - roundedW/2, roundedY - roundedH*1.4, roundedW*2, (roundedW*2/hat.width) *hat.height);
 				}
 				
 				//Mustache
@@ -579,10 +579,10 @@ function initExample() {
 				}
 				
 				var StepRightUpLogo = document.getElementById("StepRightUpLogo");
-				ctx.drawImage(StepRightUpLogo,20,338,120,122);
+				ctx.drawImage(StepRightUpLogo,0,218,240,244);
 				
 				var ChooseToGiveLogo = document.getElementById("ChooseToGiveLogo");
-				ctx.drawImage(ChooseToGiveLogo,370,280,210,180);
+				ctx.drawImage(ChooseToGiveLogo,340,260,240,206);
 			}
 
 		};
