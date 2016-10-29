@@ -543,8 +543,8 @@ function initExample() {
 				
 				ctxf.clip();
 				
-				//ctxf.drawImage(document.getElementById("_stageUnFiltered"), 300 - (faceShape.bounds.width/2), 240-(faceShape.bounds.height/2));
-				ctxf.drawImage(document.getElementById("_stageUnFiltered"), -faceShape.bounds.x, -faceShape.bounds.y);
+				ctxf.drawImage(document.getElementById("_stageUnFiltered"), 300 - (faceShape.bounds.width/2) - faceShape.bounds.x , 240-(faceShape.bounds.height/2) - faceShape.bounds.y);
+				//ctxf.drawImage(document.getElementById("_stageUnFiltered"), -faceShape.bounds.x, -faceShape.bounds.y);
 			
 				ctxf.restore();
 				
