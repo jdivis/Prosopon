@@ -174,6 +174,9 @@
         <div class="col-sm-10 col-sm-offset-1">
         
         		<!-- stage is where the camera data is drawn -->
+              	<canvas id="_stageUnFiltered" width="600" height="480" style="position:absolute;left:0px;top:0px;display:none;">Your browser does not seem to support canvas elements.</canvas>
+                
+                <!-- stage is where the camera data is drawn -->
               	<canvas id="_stage" width="600" height="480" style="position:absolute;left:0px;top:0px;display:none;">Your browser does not seem to support canvas elements.</canvas>
         
         	  	<!-- backgroundImage should be written to only when the background is changed -->
@@ -185,7 +188,7 @@
         	  	<!-- mirror has all of the facial features on it -->
               	<canvas id="_mirror" width="600" height="480" style="position:absolute;left:0px;top:0px;">.</canvas>
                             
-              <button id="save" class="btn-primary" style="display:none;">save</button> 
+              <button id="save" class="btn-primary">save</button> 
               <!--
 		Chrome on Android v35+ supports getUserMedia! But the video needs to be started on user action.
 		This play button will be shown, if a user action is needed.
@@ -234,13 +237,13 @@
             </div>
       </div>
           <div id="ties" class="row">
-        <div class="col-sm-6 tieBox"><img id="tie0" onClick="changeTie(0);" src="https://rawgit.com/jdivis/Prosopon/master/media/images/Tie00.png" /></div>
-        <div class="col-sm-6 tieBox"><img id="tie1" onClick="changeTie(1);" src="https://rawgit.com/jdivis/Prosopon/master/media/images/Tie01.png" /></div>
-        <div class="col-sm-6 tieBox"><img id="tie2" onClick="changeTie(2);" src="https://rawgit.com/jdivis/Prosopon/master/media/images/Tie02.png" /></div>
-        <div class="col-sm-6 tieBox"><img id="tie3" onClick="changeTie(3);" src="https://rawgit.com/jdivis/Prosopon/master/media/images/Tie03.png" /></div>
-        <div class="col-sm-6 tieBox"><img id="tie4" onClick="changeTie(4);" src="https://rawgit.com/jdivis/Prosopon/master/media/images/Tie04.png" /></div>
-        <div class="col-sm-6 tieBox"><img id="tie5" onClick="changeTie(5);" src="https://rawgit.com/jdivis/Prosopon/master/media/images/Tie05.png" /></div>
-        <div class="col-sm-6 tieBox"><img id="tie6" onClick="changeTie(6);" src="https://rawgit.com/jdivis/Prosopon/master/media/images/Tie06.png" /></div>
+        <div class="col-sm-6 tieBox"><img id="tie0" onClick="changeTie(0);" src="media/images/Tie00.png" /></div>
+        <div class="col-sm-6 tieBox"><img id="tie1" onClick="changeTie(1);" src="media/images/Tie01.png" /></div>
+        <div class="col-sm-6 tieBox"><img id="tie2" onClick="changeTie(2);" src="media/images/Tie02.png" /></div>
+        <div class="col-sm-6 tieBox"><img id="tie3" onClick="changeTie(3);" src="media/images/Tie03.png" /></div>
+        <div class="col-sm-6 tieBox"><img id="tie4" onClick="changeTie(4);" src="media/images/Tie04.png" /></div>
+        <div class="col-sm-6 tieBox"><img id="tie5" onClick="changeTie(5);" src="media/images/Tie05.png" /></div>
+        <div class="col-sm-6 tieBox"><img id="tie6" onClick="changeTie(6);" src="media/images/Tie06.png" /></div>
       </div>
         </div>
   </div>
@@ -249,8 +252,8 @@
 <div class="container">
       <div class="row">
     <div class="col-sm-offset-2">&nbsp;</div>
-    <div class="col-sm-4"><img id="StepRightUpLogo" style="visibility:hidden" src="https://rawgit.com/jdivis/Prosopon/master/media/images/CTG_2016_Back-Mustachev2.png" width="120" height="auto" /></div>
-    <div class="col-sm-4"><img id="ChooseToGiveLogo" src="https://rawgit.com/jdivis/Prosopon/master/media/images/CTG_2016_Front-Hatv2.png" style="visibility:hidden" /></div>
+    <div class="col-sm-4"><img id="StepRightUpLogo" style="visibility:hidden" src="media/images/CTG_2016_Back-Mustachev2.png" width="120" height="auto" /></div>
+    <div class="col-sm-4"><img id="ChooseToGiveLogo" src="media/images/CTG_2016_Front-Hatv2.png" style="visibility:hidden" /></div>
     <div class="col-sm-offset-2">&nbsp;</div>
   </div>
     </div>
