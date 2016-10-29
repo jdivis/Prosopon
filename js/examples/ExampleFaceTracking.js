@@ -513,6 +513,9 @@ function initExample() {
     					console.log(key + " -> " + _this._draw[key]);
   					}
 				}*/
+				
+				
+				
 				var canvasg = document.getElementById("_mirror");
 				var ctx = canvasg.getContext('2d');
 				roundedX = Math.round(faceShape.bounds.x);
@@ -540,7 +543,8 @@ function initExample() {
 				
 				ctxf.clip();
 				
-				ctxf.drawImage(document.getElementById("_stage"), 0, 0);
+				//ctxf.drawImage(document.getElementById("_stageUnFiltered"), 300 - (faceShape.bounds.width/2), 240-(faceShape.bounds.height/2));
+				ctxf.drawImage(document.getElementById("_stageUnFiltered"), -faceShape.bounds.x, -faceShape.bounds.y);
 			
 				ctxf.restore();
 				
