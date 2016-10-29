@@ -45,6 +45,14 @@ var Canvas2Image = function () {
 
 	function saveFile (strData) {
 		document.location.href = strData;
+		
+		var link = document.createElement("a");
+		link.style.display = "none";
+		link.download = 'image';
+		link.href = dataString;
+		link.click();
+		link.parentNode.removeChild(link);
+		
 	}
 
 	function genImage(strData) {
