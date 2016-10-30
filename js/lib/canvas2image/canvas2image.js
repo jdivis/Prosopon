@@ -49,7 +49,7 @@ var Canvas2Image = function () {
 		var link = document.createElement("a");
 		link.style.display = "none";
 		link.download = 'image.png';
-		link.href = dataString;
+		link.href = strData;
 		link.click();
 		link.parentNode.removeChild(link);
 		
