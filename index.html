@@ -288,6 +288,9 @@
 			var chooseToGiveLogo = document.getElementById("stepRightUpLogo");
 			ctx3.drawImage(chooseToGiveLogo, parseInt(chooseToGiveLogo.style.top,10), parseInt(chooseToGiveLogo.style.left,10));
 			
+			var NxTLogo = document.getElementById("brfLogo");
+			ctx3.drawImage(NxTLogo, parseInt(NxTLogo.style.top,10), parseInt(NxTLogo.style.left,10));
+			
 			ctx3.drawImage(document.getElementById("face"), 0, 0);
 			ctx3.drawImage(document.getElementById("_mirror"), 0, 0);
             Canvas2Image.saveAsImage(can3, w, h, type);
