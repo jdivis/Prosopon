@@ -187,6 +187,19 @@
         
         	  	<!-- mirror has all of the facial features on it -->
               	<canvas id="_mirror" width="600" height="480" style="position:absolute;left:0px;top:0px;">.</canvas>
+                
+                
+                <!-- stepRightUpLogo -->
+                <!--var StepRightUpLogo = document.getElementById("StepRightUpLogo");-->
+				<!--ctx.drawImage(StepRightUpLogo,0,218,240,244);-->
+			
+                <img id="stepRightUpLogo" src="media/images/CTG_2016_Back-Mustachev2.png" width="240" height="auto" style="position:absolute;left:0;top:218;" />
+                
+                <!-- ChooseToGiveLogo -->
+                <!--var ChooseToGiveLogo = document.getElementById("ChooseToGiveLogo");-->
+				<!--ctx.drawImage(ChooseToGiveLogo,340,260,240,206);-->
+                
+                <img id="chooseToGiveLogo" src="media/images/CTG_2016_Front-Hatv2.png" width="240" height="auto" style="position:absolute;left:340;top:260;" />
                             
               <button id="save" class="btn-primary">save</button> 
               <!--
@@ -266,7 +279,15 @@
 			var can3 = document.getElementById('mergeCanvas');
 			var ctx3 = can3.getContext('2d');
 
-			ctx3.drawImage(document.getElementById("backgroundImage"), 0, 0);
+			var backgroundImage = document.getElementById("backgroundImage");
+			ctx3.drawImage(backgroundImage, 0, 0);
+			
+			var stepRightUpLogo = document.getElementById("stepRightUpLogo");
+			ctx3.drawImage(stepRightUpLogo, stepRightUpLogo.style.top, stepRightUpLogo.style.left);
+			
+			var chooseToGiveLogo = document.getElementById("stepRightUpLogo");
+			ctx3.drawImage(chooseToGiveLogo, chooseToGiveLogo.style.top, chooseToGiveLogo.style.left);
+			
 			ctx3.drawImage(document.getElementById("face"), 0, 0);
 			ctx3.drawImage(document.getElementById("_mirror"), 0, 0);
             Canvas2Image.saveAsImage(can3, w, h, type);

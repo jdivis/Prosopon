@@ -549,8 +549,11 @@ function initExample() {
 			
 				ctxf.restore();
 			
-				canvasf.style.left = 300 - (faceShape.bounds.width/2) - faceShape.bounds.x;
-				canvasf.style.top = 240-(faceShape.bounds.height/2) - faceShape.bounds.y;
+				canvasf.style.left = (300 - (faceShape.bounds.width/2) - faceShape.bounds.x) +"px";
+				canvasf.style.top = (240-(faceShape.bounds.height/2) - faceShape.bounds.y) + "px";
+				
+				canvasg.style.left = (300 - (faceShape.bounds.width/2) - faceShape.bounds.x) +"px";
+				canvasg.style.top = (240-(faceShape.bounds.height/2) - faceShape.bounds.y) + "px";
 				
 				//clear canvas
 				ctx.clearRect(0,0,600,500);
@@ -585,12 +588,6 @@ function initExample() {
 					var tie = document.getElementById("tie" + tieID);//scale y position (.75) and height (1.25) to better fit face
 					ctx.drawImage(tie,tieFinalX -(roundedW/2), tieFinalY + (roundedH/2), roundedW*2, (roundedW*2/tie.width)*tie.height);
 				}
-				
-				var StepRightUpLogo = document.getElementById("StepRightUpLogo");
-				ctx.drawImage(StepRightUpLogo,0,218,240,244);
-				
-				var ChooseToGiveLogo = document.getElementById("ChooseToGiveLogo");
-				ctx.drawImage(ChooseToGiveLogo,340,260,240,206);
 			}
 
 		};
