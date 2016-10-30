@@ -51,8 +51,6 @@ var Canvas2Image = function () {
 		link.download = 'image.png';
 		link.href = strData;
 		link.click();
-		link.parentNode.removeChild(link);
-		
 	}
 
 	function genImage(strData) {
