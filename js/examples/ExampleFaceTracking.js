@@ -543,13 +543,14 @@ function initExample() {
 				
 				ctxf.clip();
 				
-				//ctxf.drawImage(document.getElementById("_stage"),faceShape.bounds.x,faceShape.bounds.y,faceShape.bounds.width,faceShape.bounds.height, 300 - (faceShape.bounds.width/2) - faceShape.bounds.x , 240-(faceShape.bounds.height/2) - faceShape.bounds.y,faceShape.bounds.width,faceShape.bounds.height);
+				ctxf.drawImage(document.getElementById("_stage"),faceShape.bounds.x,faceShape.bounds.y,faceShape.bounds.width,faceShape.bounds.height, 300 - (faceShape.bounds.width/2) - faceShape.bounds.x , 240-(faceShape.bounds.height/2) - faceShape.bounds.y,faceShape.bounds.width,faceShape.bounds.height);
 				//ctxf.drawImage(document.getElementById("_stageUnFiltered"), -faceShape.bounds.x, -faceShape.bounds.y);
-				//canvasf.style.left = 300 - (faceShape.bounds.width/2) - faceShape.bounds.x;
-				//canvasf.style.top = 240-(faceShape.bounds.height/2) - faceShape.bounds.y;
 				ctxf.drawImage(document.getElementById("_stage"), 0, 0);
 			
 				ctxf.restore();
+			
+				canvasf.style.left = 300 - (faceShape.bounds.width/2) - faceShape.bounds.x;
+				canvasf.style.top = 240-(faceShape.bounds.height/2) - faceShape.bounds.y;
 				
 				//clear canvas
 				ctx.clearRect(0,0,600,500);

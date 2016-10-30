@@ -21,6 +21,7 @@
 	padding:20px;
 	display:block;
 	margin: 0 auto;
+	box-shadow: #000 3px 3px, #FFF 3.5px 3.5px,#000 5px 5px;
 }
 
 .jumboBackground{
@@ -47,4 +48,9 @@
 #save{
 	position:absolute;
 	top:500px;
+}
+
+h3{
+	color: #FFF;
+    text-shadow: #000 2px 2px;
 }
