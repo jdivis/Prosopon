@@ -193,7 +193,7 @@
                 <!--var StepRightUpLogo = document.getElementById("StepRightUpLogo");-->
 				<!--ctx.drawImage(StepRightUpLogo,0,218,240,244);-->
 			
-                <img id="stepRightUpLogo" src="media/images/CTG_2016_STR-Hat-Mustachev2.png" width="200" height="auto" style="position:absolute;left:20;top:260px;">
+                <img id="stepRightUpLogo" src="media/images/CTG_2016_STR-Hat-Mustachev2.png" width="200" height="auto" style="position:absolute;left:0px;top:260px;">
                 
                 <!-- ChooseToGiveLogo -->
                 <!--var ChooseToGiveLogo = document.getElementById("ChooseToGiveLogo");-->
@@ -299,19 +299,20 @@
 			ctx3.drawImage(chooseToGiveLogo, chooseToGiveLogoX, chooseToGiveLogoY, chooseToGiveLogoW, chooseToGiveLogoH);
 			
 			var nxtHolder = document.getElementById("brfLogo");
-			var nxtHolderTop = parseInt(nxtHolder.style.top);
-			var nxtHolderLeft = parseInt(nxtHolder.style.left);
+			var nxtHolderTop = parseInt(nxtHolder.offsetTop);
+			var nxtHolderLeft = parseInt(nxtHolder.offsetLeft);
 			
 			var NxTLogoBlack = document.getElementById("nxtBlackLogo");
 			var nxtLogoBlackTop = parseInt(NxTLogoBlack.style.top) + nxtHolderTop;
 			var nxtLogoBlackLeft = parseInt(NxTLogoBlack.style.left) + nxtHolderLeft;
+			ctx3.globalAlpha = 0.5
 			ctx3.drawImage(NxTLogoBlack, nxtLogoBlackTop, nxtLogoBlackLeft,NxTLogoBlack.width,NxTLogoBlack.height);
 			
 			var NxTLogoWhite = document.getElementById("nxtWhiteLogo");
 			var nxtLogoWhiteTop = parseInt(NxTLogoWhite.style.top) + nxtHolderTop;
 			var nxtLogoWhiteLeft = parseInt(NxTLogoWhite.style.left) + nxtHolderLeft;
 			ctx3.drawImage(NxTLogoWhite, nxtLogoWhiteTop, nxtLogoWhiteLeft,NxTLogoWhite.width,NxTLogoWhite.height);
-			
+			ctx.globalAlpha = 1
 			var faceCanvas = document.getElementById("face");
 			var faceX = parseInt(faceCanvas.style.left);
 			var faceY = parseInt(faceCanvas.style.top);
