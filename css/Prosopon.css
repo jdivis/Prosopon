@@ -55,7 +55,11 @@ h3.h3 {
     text-shadow: #000 2px 2px;
 }
 
-.btn-primary{
+#Prosopon .btn-primary{
 	background-color:#000;
 	border-color:#777;
+}
+
+#Prosopon .btn-primary:hover{
+	background-color:#000;
 }
