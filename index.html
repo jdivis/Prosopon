@@ -283,10 +283,10 @@
 			ctx3.drawImage(backgroundImage, 0, 0);
 			
 			var stepRightUpLogo = document.getElementById("stepRightUpLogo");
-			ctx3.drawImage(stepRightUpLogo, stepRightUpLogo.style.top, stepRightUpLogo.style.left);
+			ctx3.drawImage(stepRightUpLogo, parseInt(stepRightUpLogo.style.top,10), parseInt(stepRightUpLogo.style.left,10));
 			
 			var chooseToGiveLogo = document.getElementById("stepRightUpLogo");
-			ctx3.drawImage(chooseToGiveLogo, chooseToGiveLogo.style.top, chooseToGiveLogo.style.left);
+			ctx3.drawImage(chooseToGiveLogo, parseInt(chooseToGiveLogo.style.top,10), parseInt(chooseToGiveLogo.style.left,10));
 			
 			ctx3.drawImage(document.getElementById("face"), 0, 0);
 			ctx3.drawImage(document.getElementById("_mirror"), 0, 0);
