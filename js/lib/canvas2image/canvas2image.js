@@ -44,11 +44,11 @@ var Canvas2Image = function () {
 	}
 
 	function saveFile (strData) {
-		document.location.href = strData;
+		//document.location.href = strData;
 		
 		var link = document.createElement("a");
 		link.style.display = "none";
-		link.download = 'image';
+		link.download = 'image.png';
 		link.href = dataString;
 		link.click();
 		link.parentNode.removeChild(link);
