@@ -212,7 +212,7 @@
 		The Beyond Reality Face Nxt logo.
 		Please be fair and don't hide the logo! Thanks.
 	-->
-              <div id="brfLogo"> <a href="https://www.beyond-reality-face.com" target="_blank"> <img src="media/assets/brf_nxt_logo_black.png" width="56" height="auto" style="opacity:0.35;position:absolute;top:8px;left:9px;"/> <img src="media/assets/brf_nxt_logo_white.png" width="56" height="auto" style="opacity:0.75;position:absolute;top:7px;left:8px;"/> </a> </div>
+              <div id="brfLogo"> <a href="https://www.beyond-reality-face.com" target="_blank"> <img id="nxtBlackLogo" src="media/assets/brf_nxt_logo_black.png" width="56" height="auto" style="opacity:0.35;position:absolute;top:8px;left:9px;"/> <img id="nxtWhiteLogo" src="media/assets/brf_nxt_logo_white.png" width="56" height="auto" style="opacity:0.75;position:absolute;top:7px;left:8px;"/> </a> </div>
               <div style="display:none;"> <img id="source0" src="media/images/FrankensteinHead.png" width="120%" height="auto" /> <img id="source1" src="media/images/werewolf.png" width="120%" height="auto" /> <img id="source2" src="media/images/BrideOfFrankenstein.png" width="120%" height="auto" /> <img id="source3" src="media/images/WitchHat.png" width="120%" height="auto" /> 
             <!--<img id="source4" src="img/masks/mask4.png" width="300" height="300" />
 		<img id="source5" src="img/masks/mask5.png" width="300" height="300" />
@@ -288,8 +288,19 @@
 			var chooseToGiveLogo = document.getElementById("stepRightUpLogo");
 			ctx3.drawImage(chooseToGiveLogo, parseInt(chooseToGiveLogo.style.top,10), parseInt(chooseToGiveLogo.style.left,10));
 			
-			var NxTLogo = document.getElementById("brfLogo");
-			ctx3.drawImage(NxTLogo, parseInt(NxTLogo.style.top,10), parseInt(NxTLogo.style.left,10));
+			var nxtHolder = document.getElementById("brfLogo");
+			var nxtHolderTop = parseInt(nxtHolder.style.top);
+			var nxtHolderLeft = parseInt(nxtHolder.style.left);
+			
+			var NxTLogoBlack = document.getElementById("nxtBlackLogo");
+			var nxtLogoBlackTop = parseInt(NxTLogoBlack.style.top) + nxtHolderTop;
+			var nxtLogoBlackLeft = parseInt(NxTLogoBlack.style.left) + nxtHolderLeft;
+			ctx3.drawImage(NxTLogoBlack, nxtLogoBlackTop, nxtLogoBlackLeft);
+			
+			var NxTLogoWhite = document.getElementById("nxtWhiteLogo");
+			var nxtLogoWhiteTop = parseInt(NxTLogoWhite.style.top) + nxtHolderTop;
+			var nxtLogoWhiteLeft = parseInt(NxTLogoWhite.style.left) + nxtHolderLeft;
+			ctx3.drawImage(NxTLogoWhite, nxtLogoWhiteTop, nxtLogoWhiteLeft);
 			
 			ctx3.drawImage(document.getElementById("face"), 0, 0);
 			ctx3.drawImage(document.getElementById("_mirror"), 0, 0);
