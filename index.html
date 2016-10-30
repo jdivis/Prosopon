@@ -283,10 +283,20 @@
 			ctx3.drawImage(backgroundImage, 0, 0);
 			
 			var stepRightUpLogo = document.getElementById("stepRightUpLogo");
-			ctx3.drawImage(stepRightUpLogo, parseInt(stepRightUpLogo.style.top,10), parseInt(stepRightUpLogo.style.left,10),parseInt(stepRightUpLogo.style.width,10),parseInt(stepRightUpLogo.style.height,10));
+			var stepRightUpLogoX = parseInt(stepRightUpLogo.style.left,10);
+			var stepRightUpLogoY = parseInt(stepRightUpLogo.style.top,10);
+			var stepRightUpLogoW = parseInt(stepRightUpLogo.width,10);
+			var stepRightUpLogoH = parseInt(stepRightUpLogo.height,10);
+			
+			ctx3.drawImage(stepRightUpLogo, stepRightUpLogoY, stepRightUpLogoX,stepRightUpLogoW,stepRightUpLogoH);
 			
 			var chooseToGiveLogo = document.getElementById("stepRightUpLogo");
-			ctx3.drawImage(chooseToGiveLogo, parseInt(chooseToGiveLogo.style.top,10), parseInt(chooseToGiveLogo.style.left,10),parseInt(chooseToGiveLogo.style.width,10),parseInt(chooseToGiveLogo.style.height,10));
+			var chooseToGiveLogoX = parseInt(chooseToGiveLogo.style.left,10);
+			var chooseToGiveLogoY = parseInt(chooseToGiveLogo.style.top,10);
+			var chooseToGiveLogoW = parseInt(chooseToGiveLogo.width,10);
+			var chooseToGiveLogoH = parseInt(chooseToGiveLogo.height,10);
+			
+			ctx3.drawImage(chooseToGiveLogo, chooseToGiveLogoY, chooseToGiveLogoX,chooseToGiveLogoW,chooseToGiveLogoH);
 			
 			var nxtHolder = document.getElementById("brfLogo");
 			var nxtHolderTop = parseInt(nxtHolder.style.top);
@@ -295,12 +305,12 @@
 			var NxTLogoBlack = document.getElementById("nxtBlackLogo");
 			var nxtLogoBlackTop = parseInt(NxTLogoBlack.style.top) + nxtHolderTop;
 			var nxtLogoBlackLeft = parseInt(NxTLogoBlack.style.left) + nxtHolderLeft;
-			ctx3.drawImage(NxTLogoBlack, nxtLogoBlackTop, nxtLogoBlackLeft);
+			ctx3.drawImage(NxTLogoBlack, nxtLogoBlackTop, nxtLogoBlackLeft,NxTLogoBlack.width,NxTLogoBlack.height);
 			
 			var NxTLogoWhite = document.getElementById("nxtWhiteLogo");
 			var nxtLogoWhiteTop = parseInt(NxTLogoWhite.style.top) + nxtHolderTop;
 			var nxtLogoWhiteLeft = parseInt(NxTLogoWhite.style.left) + nxtHolderLeft;
-			ctx3.drawImage(NxTLogoWhite, nxtLogoWhiteTop, nxtLogoWhiteLeft);
+			ctx3.drawImage(NxTLogoWhite, nxtLogoWhiteTop, nxtLogoWhiteLeft,NxTLogoWhite.width,NxTLogoWhite.height);
 			
 			var faceCanvas = document.getElementById("face");
 			var faceX = parseInt(faceCanvas.style.left);
