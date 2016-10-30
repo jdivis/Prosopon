@@ -283,10 +283,10 @@
 			ctx3.drawImage(backgroundImage, 0, 0);
 			
 			var stepRightUpLogo = document.getElementById("stepRightUpLogo");
-			ctx3.drawImage(stepRightUpLogo, parseInt(stepRightUpLogo.style.top,10), parseInt(stepRightUpLogo.style.left,10));
+			ctx3.drawImage(stepRightUpLogo, parseInt(stepRightUpLogo.style.top,10), parseInt(stepRightUpLogo.style.left,10),parseInt(stepRightUpLogo.style.width,10),parseInt(stepRightUpLogo.style.height,10));
 			
 			var chooseToGiveLogo = document.getElementById("stepRightUpLogo");
-			ctx3.drawImage(chooseToGiveLogo, parseInt(chooseToGiveLogo.style.top,10), parseInt(chooseToGiveLogo.style.left,10));
+			ctx3.drawImage(chooseToGiveLogo, parseInt(chooseToGiveLogo.style.top,10), parseInt(chooseToGiveLogo.style.left,10),parseInt(chooseToGiveLogo.style.width,10),parseInt(chooseToGiveLogo.style.height,10));
 			
 			var nxtHolder = document.getElementById("brfLogo");
 			var nxtHolderTop = parseInt(nxtHolder.style.top);
@@ -302,8 +302,17 @@
 			var nxtLogoWhiteLeft = parseInt(NxTLogoWhite.style.left) + nxtHolderLeft;
 			ctx3.drawImage(NxTLogoWhite, nxtLogoWhiteTop, nxtLogoWhiteLeft);
 			
-			ctx3.drawImage(document.getElementById("face"), 0, 0);
-			ctx3.drawImage(document.getElementById("_mirror"), 0, 0);
+			var faceCanvas = document.getElementById("face");
+			var faceX = parseInt(faceCanvas.style.left);
+			var faceY = parseInt(faceCanvas.style.top);
+			
+			ctx3.drawImage(faceCanvas, faceX, faceY);
+			
+			var accessoryCanvas = document.getElementById("_mirror");
+			var accessoryX = parseInt(accessoryCanvas.style.left);
+			var accessoryY = parseInt(accessoryCanvas.style.top);
+			
+			ctx3.drawImage(accessoryCanvas, accessoryX, accessoryY);
             Canvas2Image.saveAsImage(can3, w, h, type);
         }
     </script>
