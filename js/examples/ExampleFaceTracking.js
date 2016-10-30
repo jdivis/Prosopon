@@ -550,10 +550,10 @@ function initExample() {
 				ctxf.restore();
 			
 				canvasf.style.left = (300 - (faceShape.bounds.width/2) - faceShape.bounds.x) +"px";
-				canvasf.style.top = (240-(faceShape.bounds.height/2) - faceShape.bounds.y) + "px";
+				canvasf.style.top = (240-(faceShape.bounds.height/2) - faceShape.bounds.y) + 50 + "px";
 				
 				canvasg.style.left = (300 - (faceShape.bounds.width/2) - faceShape.bounds.x) +"px";
-				canvasg.style.top = (240-(faceShape.bounds.height/2) - faceShape.bounds.y) + "px";
+				canvasg.style.top = (240-(faceShape.bounds.height/2) - faceShape.bounds.y) + 50 + "px";
 				
 				//clear canvas
 				ctx.clearRect(0,0,600,500);
