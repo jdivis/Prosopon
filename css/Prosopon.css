@@ -45,6 +45,10 @@
 	margin-bottom:0;
 }
 
+.navbar{
+   display:none;
+}
+
 #save{
 	position:absolute;
 	top:500px;
