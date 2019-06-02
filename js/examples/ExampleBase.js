@@ -364,7 +364,13 @@ function initExample() {
 				setTimeout(_this.onStreamDimensionsAvailable, 500);
 			});
 
-			_this._camera.src = url.createObjectURL(stream);
+			
+			
+			//_this._camera.src = url.createObjectURL(stream);
+			var binaryData = [];
+			binaryData.push(data);
+			_this._camera.src = window.URL.createObjectURL(new Blob(binaryData, {type: "application/zip"}));
+			
 			_this._camera.play();
 		};
 
