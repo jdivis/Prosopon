@@ -367,10 +367,9 @@ function initExample() {
 			
 			
 			//_this._camera.src = url.createObjectURL(stream);
-			var binaryData = [];
-			binaryData.push(stream);
-			_this._camera.src = window.URL.createObjectURL(new Blob(binaryData, {type: "application/zip"}));
-			
+			//var binaryData = [];
+			//binaryData.push(stream);
+			_this._camera.srcObject = stream;
 			_this._camera.play();
 		};
 
