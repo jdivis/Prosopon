@@ -368,7 +368,7 @@ function initExample() {
 			
 			//_this._camera.src = url.createObjectURL(stream);
 			var binaryData = [];
-			binaryData.push(data);
+			binaryData.push(stream);
 			_this._camera.src = window.URL.createObjectURL(new Blob(binaryData, {type: "application/zip"}));
 			
 			_this._camera.play();
